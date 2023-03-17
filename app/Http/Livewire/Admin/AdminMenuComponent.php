@@ -12,13 +12,14 @@ class AdminMenuComponent extends Component
     use WithPagination;
     public $menu_id;
 
-    // public function deleteProduct()
-    // {
-    //     $menu = Menu::find($this->menu_id);
-    //     unlink('assets/imgs/menu/' . $menu->image);
-    //     $menu->delete();
-    //     session()->flash('message', 'menu has been deleted successfully!');
-    // }
+    public function deleteMenu($menu_id)
+    {
+        // ddd($menu_id);
+        $menu = Menu::find($menu_id);
+        unlink('assets/imgs/menu/' . $menu->image);
+        $menu->delete();
+        session()->flash('message', 'menu has been deleted successfully!');
+    }
 
     public function render()
     {

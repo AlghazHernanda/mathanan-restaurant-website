@@ -61,7 +61,7 @@
                                                 <td>{{ $menu->created_at }}</td>                                               
                                                 <td>
                                                     <a href="{{ route('admin.menu.edit',['menu_id'=>$menu->id]) }}" class="text-info">Edit</a>
-                                                    <a href="#" class="text-danger" onclick="deleteConfirmation({{ $menu_id }})" style="margin-left: 20px;">Delete</a>
+                                                    <a href="#" class="text-danger"  wire:click.prevent="deleteMenu({{ $menu->id}})" style="margin-left: 20px;">Delete</a>
                                                 </td>
                                             </tr> 
                                         @endforeach
