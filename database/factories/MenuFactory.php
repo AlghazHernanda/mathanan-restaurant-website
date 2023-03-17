@@ -25,7 +25,7 @@ class MenuFactory extends Factory
             'description' => $this->faker->text(200),
             'regular_price' => $this->faker->numberBetween(10, 500),
             'quantity' => $this->faker->numberBetween(10, 50),
-            'image' => 'menu-' . $this->faker->numberBetween(1, 13),
+            'image' => 'menu-' . $this->faker->numberBetween(1, 13) . '.jpeg',
         ];
     }
 }
