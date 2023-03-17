@@ -89,7 +89,7 @@
                                     </a>
                                 </div>
 
-                                {{-- @livewire('cart-icon-component') --}}
+                                @livewire('cart-icon-component')
 
 
                             </div>
