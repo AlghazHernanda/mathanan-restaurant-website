@@ -5,6 +5,8 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\Admin\AdminAddMenuComponent;
+use App\Http\Livewire\Admin\AdminMenuComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +32,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::middleware(['auth', 'authadmin'])->group(function () {
+    Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
+    Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');
+    // Route::get('/admin/product/edit/{product_id}', AdminEditProductComponent::class)->name('admin.product.edit');
+});
+
 
 require __DIR__ . '/auth.php';
