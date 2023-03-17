@@ -5,8 +5,9 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
-use App\Http\Livewire\Admin\AdminAddMenuComponent;
 use App\Http\Livewire\Admin\AdminMenuComponent;
+use App\Http\Livewire\Admin\AdminAddMenuComponent;
+use App\Http\Livewire\Admin\AdminEditMenuComponent;
 
 /*
 |--------------------------------------------------------------------------
