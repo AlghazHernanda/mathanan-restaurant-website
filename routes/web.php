@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'authadmin'])->group(function () {
     Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
     Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');
-    // Route::get('/admin/product/edit/{product_id}', AdminEditProductComponent::class)->name('admin.product.edit');
+    Route::get('/admin/menu/edit/{menu_id}', AdminEditMenuComponent::class)->name('admin.menu.edit');
 });
 
 
