@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('utype')->default('USR')->comment('ADM is ADMIN and USR is USER'); //untuk mengetahui admin atau user biar gampang logic nya
             $table->rememberToken();
             $table->timestamps();
         });
