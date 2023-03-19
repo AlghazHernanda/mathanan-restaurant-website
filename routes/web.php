@@ -4,6 +4,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminMenuComponent;
 use App\Http\Livewire\Admin\AdminAddMenuComponent;
@@ -24,6 +25,9 @@ Route::get('/', HomeComponent::class)->name('home.index');
 Route::get('/menu', MenuComponent::class)->name('menu');
 Route::get('/cart', CartComponent::class)->name('menu.cart');
 
+//route untuk pembayaran
+Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -34,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// route untuk admin dan sudah dilindungin oleh middleware
 Route::middleware(['auth', 'authadmin'])->group(function () {
     Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
     Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');
