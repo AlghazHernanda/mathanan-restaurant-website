@@ -351,7 +351,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="blog.html">Blog </a></li>                                    
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{ route('menu.cart') }}">Cart</a></li>
                                     @auth
                                     <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
                                         
