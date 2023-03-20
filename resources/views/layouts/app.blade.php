@@ -357,7 +357,7 @@
                                         
                                         @if (Auth::user()->utype == 'ADM')
                                         <ul class="sub-menu">
-                                            {{-- <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li> --}}
+                                            <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                                             <li><a href="{{ route('admin.menus') }}">Menus</a></li>
                                             {{-- {{ route('admin.categories') }} --}}
                                             {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}

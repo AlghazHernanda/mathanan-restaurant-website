@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminMenuComponent;
 use App\Http\Livewire\Admin\AdminAddMenuComponent;
 use App\Http\Livewire\Admin\AdminEditMenuComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,8 @@ Route::middleware('auth')->group(function () {
 
 // route untuk admin dan sudah dilindungin oleh middleware
 Route::middleware(['auth', 'authadmin'])->group(function () {
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+
     Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
     Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');
     Route::get('/admin/menu/edit/{menu_id}', AdminEditMenuComponent::class)->name('admin.menu.edit');
