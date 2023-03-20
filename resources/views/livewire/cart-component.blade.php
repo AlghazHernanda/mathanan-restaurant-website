@@ -77,7 +77,7 @@
                            
                             <div class="col-lg-6 col-md-12">
 
-                                <form action="{{ route('checkout') }}" method="POST">
+                                <form action="/checkout" method="GET">
                                 @csrf
 
                                 <div class="border p-md-4 p-30 border-radius cart-totals">

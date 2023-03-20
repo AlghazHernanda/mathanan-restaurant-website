@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('phonenumber');
             $table->json('cart');
             $table->bigInteger('total_price');
+            $table->string('status')->default('belum pesan')->nullable();
+            $table->string('transaction_id')->nullable(); //nullalble buat coba-coba
+            $table->string('payment_type')->nullable(); //nullalble buat coba-coba
+            $table->string('payment_code')->nullable();
+            $table->string('pdf_url')->nullable();
             $table->timestamps();
         });
     }

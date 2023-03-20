@@ -26,7 +26,9 @@ Route::get('/menu', MenuComponent::class)->name('menu');
 Route::get('/cart', CartComponent::class)->name('menu.cart');
 
 //route untuk pembayaran
-Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+//memanggil fungsi secara hidden dihalaman checkout
+Route::post('/checkout', [OrderController::class, 'payment_post']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
