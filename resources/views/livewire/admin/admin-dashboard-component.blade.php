@@ -36,7 +36,7 @@ function convertDateDBtoIndo($string)
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                               
+                               <h2>Pesanan Sudah di antar</h2>
                             </div>
                             <div class="card-body">
                                 @if(Session::has('message'))
@@ -50,7 +50,9 @@ function convertDateDBtoIndo($string)
                                             <th>Name</th>
                                             <th>cart</th>
                                             <th>total price</th>
-                                            <th>status</th>
+                                            <th>status bayar</th>
+                                            <th>status antar</th>
+                                            <th>tanggal</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -58,7 +60,8 @@ function convertDateDBtoIndo($string)
                                         @php
                                             $i = ($orders->currentPage()-1)*$orders->perPage();
                                         @endphp
-                                        @foreach ($orders as $order )
+                                        @foreach ($orders as $order)
+                                        @if ($order->status_antar === 'SUDAH')
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $order->phonenumber }}</td>
@@ -67,12 +70,70 @@ function convertDateDBtoIndo($string)
                                                 <td>Cart</td>
                                                 <td>{{ $order->total_price }}</td>
                                                 <td>{{ $order->status }}</td>
+                                                <td>{{ $order->status_antar }}</td>
                                                 <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
                                                 <td>
-                                                    {{-- <a href="{{ route('admin.order.edit',['order_id'=>$order->id]) }}" class="text-info">Edit</a>
-                                                    <a href="#" class="text-danger"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a> --}}
+                                                    {{-- <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Sudah di antar</a> --}}
+                                                    {{-- <a href="#" class="text-danger"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a> --}}
                                                 </td>
-                                            </tr> 
+                                            </tr>
+                                            @endif 
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                                {{ $orders->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">    
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                               <h2>Pesanan Belum di antar</h2>
+                            </div>
+                            <div class="card-body">
+                                @if(Session::has('message'))
+                                  <div class="alert alert-success" role="alert">{{ Session::get('message') }}</div>
+                                @endif
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>phonenumber</th>
+                                            <th>Name</th>
+                                            <th>cart</th>
+                                            <th>total price</th>
+                                            <th>status bayar</th>
+                                            <th>status antar</th>
+                                            <th>tanggal</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php
+                                            $i = ($orders->currentPage()-1)*$orders->perPage();
+                                        @endphp
+                                        @foreach ($orders as $order)
+                                        @if ($order->status_antar === 'BELUM')
+                                            <tr>
+                                                <td>{{ ++$i }}</td>
+                                                <td>{{ $order->phonenumber }}</td>
+                                                {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
+                                                <td>{{ $order->name }}</td>
+                                                <td>Cart</td>
+                                                <td>{{ $order->total_price }}</td>
+                                                <td>{{ $order->status }}</td>
+                                                <td>{{ $order->status_antar }}</td>
+                                                <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
+                                                <td>
+                                                    <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Sudah di antar</a>
+                                                    {{-- <a href="#" class="text-danger"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a> --}}
+                                                </td>
+                                            </tr>
+                                            @endif 
                                         @endforeach
                                     </tbody>
                                 </table>

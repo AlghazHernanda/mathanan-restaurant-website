@@ -79,6 +79,7 @@ class OrderController extends Controller
         $order->cart = $request->get('cart');
         $order->phonenumber = $request->get('phonenumber');
 
+        $order->status_antar = "belum di antar";
 
         $order->transaction_id = $json->transaction_id; //ambil transaction_id yang di dalam JSON
         $order->total_price = $json->gross_amount;  //ambil gross_amount yang di dalam JSON

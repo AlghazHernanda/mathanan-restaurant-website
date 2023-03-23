@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('payment_type')->nullable(); //nullalble buat coba-coba
             $table->string('payment_code')->nullable();
             $table->string('pdf_url')->nullable();
+            $table->string('status_antar')->default("belum di antar");
             $table->timestamps();
         });
     }

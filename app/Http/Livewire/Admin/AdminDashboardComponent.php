@@ -7,13 +7,20 @@ use Livewire\Component;
 
 class AdminDashboardComponent extends Component
 {
+    public function accept($order_id)
+    {
+        $order = Order::find($order_id);
+        $order->status_antar = 'SUDAH';
+        $order->save();
+        session()->flash('message', 'data berhasil diubah');
+    }
     public function render()
     {
         $orders = Order::orderBy('created_at', 'DESC')->paginate(10);
 
         //logic untuk ngambil data cart dari database
-        $order = Order::find('2');
-        $order->cart = json_decode($order->cart);
+        // $order = Order::find('2');
+        // $order->cart = json_decode($order->cart);
         // dd($order->cart);
         // foreach ($order->cart as $item) {
         //     //mengakses kuantiti menu nya ada diluar model
