@@ -64,7 +64,7 @@ function convertDateDBtoIndo($string)
                                                 <td>{{ $order->phonenumber }}</td>
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
                                                 <td>{{ $order->name }}</td>
-                                                <td>cart</td>
+                                                <td>Cart</td>
                                                 <td>{{ $order->total_price }}</td>
                                                 <td>{{ $order->status }}</td>
                                                 <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
