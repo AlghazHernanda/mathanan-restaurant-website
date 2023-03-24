@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminMenuComponent;
 use App\Http\Livewire\Admin\AdminAddMenuComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditMenuComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 
@@ -31,11 +32,12 @@ Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 //memanggil fungsi secara hidden dihalaman checkout
 Route::post('/checkout', [OrderController::class, 'payment_post']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
