@@ -153,9 +153,21 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
+                                                        <td class="cart_total_label">Email</td>
+                                                        <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
+                                                            <input type="text" id="email" name="email">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
                                                         <td class="cart_total_label">Phone Number</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
                                                             <input type="number" id="name" name="phonenumber">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cart_total_label">Address</td>
+                                                        <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
+                                                            <input type="text" id="address" name="address">
                                                         </td>
                                                     </tr>
                                                     <tr>

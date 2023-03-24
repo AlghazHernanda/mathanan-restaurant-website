@@ -76,6 +76,8 @@ class OrderController extends Controller
         $order = new Order();
 
         $order->name = $request->get('name');
+        $order->email = $request->get('email');
+        $order->address = $request->get('address');
         $order->cart = $request->get('cart');
         $order->phonenumber = $request->get('phonenumber');
 
