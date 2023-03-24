@@ -18,6 +18,8 @@ class AdminDashboardComponent extends Component
     {
         $orders = Order::orderBy('created_at', 'DESC')->paginate(10);
 
+        $total_all_price = Order::sum('total_price'); //menghitung total semua transaksi
+
         //logic untuk ngambil data cart dari database
         // $order = Order::find('2');
         // $order->cart = json_decode($order->cart);
@@ -28,6 +30,6 @@ class AdminDashboardComponent extends Component
         //     dd($item->model->name);
         // }
 
-        return view('livewire.admin.admin-dashboard-component', ['orders' => $orders]);
+        return view('livewire.admin.admin-dashboard-component', ['orders' => $orders, 'total_all_price' =>  $total_all_price]);
     }
 }
