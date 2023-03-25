@@ -27,6 +27,8 @@ class UserFactory extends Factory
             'name' => 'Mohamad Alghaz',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
+            'address' => 'Taman Sentosa Blok C / 6 No.10',
+            'phonenumber' => "081219288648",
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'utype' => 'ADM',
             'remember_token' => Str::random(10),
