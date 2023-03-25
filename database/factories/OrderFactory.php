@@ -16,6 +16,7 @@ class OrderFactory extends Factory
      */
     public function definition(): array
     {
+        // dummy data untuk cart
         //$json_cart = {"a775bac9cff7dec2b984e023b95206aa":{"rowId":"a775bac9cff7dec2b984e023b95206aa","id":3,"name":"cumque optio molestiae est et","qty":2,"price":320,"options":[],"tax":"0.00","isSaved":false,"subtotal":"640.00","model":{"id":3,"name":"cumque optio molestiae est et","slug":"cumque-optio-molestiae-est-et","description":"Id qui in illum veritatis. Est alias doloremque repellendus odit aut. Animi beatae repudiandae ut.","regular_price":"320.00","quantity":14,"image":"menu-11.jpeg","images":null,"featured":0,"created_at":"2023-03-19T12:20:05.000000Z","updated_at":"2023-03-19T12:20:05.000000Z"}},"370d08585360f5c568b18d1f2e4ca1df":{"rowId":"370d08585360f5c568b18d1f2e4ca1df","id":2,"name":"delectus nam harum ipsa alias","qty":1,"price":248,"options":[],"tax":"0.00","isSaved":false,"subtotal":"248.00","model":{"id":2,"name":"delectus nam harum ipsa alias","slug":"delectus-nam-harum-ipsa-alias","description":"Illo iusto nihil delectus quod facere voluptates et. Iusto excepturi quae rerum. Corrupti repudiandae occaecati numquam magnam.","regular_price":"248.00","quantity":39,"image":"menu-7.jpeg","images":null,"featured":0,"created_at":"2023-03-19T12:20:05.000000Z","updated_at":"2023-03-19T12:20:05.000000Z"}}}
         return [
             'name' => "Mohamad Alghaz",
