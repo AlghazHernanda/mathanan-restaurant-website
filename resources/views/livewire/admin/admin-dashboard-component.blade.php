@@ -30,8 +30,46 @@ function convertDateDBtoIndo($string)
                 </div>
             </div>
         </div>
+
+       
+
         <section class="mt-50 mb-50">
+            
             <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
+                            <div class="pl-30">
+                                <h4 class="mb-5 fw-500">
+                                    total revenue = Rp. {{ $total_all_price }}
+                                </h4>
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
+                            
+                            <div class="pl-30">
+                                <h4 class="mb-5 fw-500">
+                                    total pesanan = {{ $orders->count() }}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
+                            
+                            <div class="pl-30">
+                                <h4 class="mb-5 fw-500">
+                                    total revenue = Rp.{{ $total_all_price }}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
