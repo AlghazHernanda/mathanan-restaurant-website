@@ -104,11 +104,25 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="cart_total_label">Phone Number</td>
+                                                            <td class="cart_total_label">Email</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="number" id="name" name="phonenumber">
+                                                                <input type="text" id="email" name="email" value="{{ Auth::user()->email }}">
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <td class="cart_total_label">Phone Number</td>
+                                                            <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
+                                                                <input type="number" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}">
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="cart_total_label">Address</td>
+                                                            <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
+                                                                <input type="text" id="address" name="address"  value="{{ Auth::user()->address }}">
+                                                            </td>
+                                                        </tr>
+
                                                         <tr>
                                                             <td class="cart_total_label">Total</td>
                                                             <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">${{ Cart::total() }}</span></strong></td>
