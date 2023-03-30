@@ -82,12 +82,7 @@
                         </div>
                         <div class="header-action-right">
                             <div class="header-action-2">
-                                <div class="header-action-icon-2">
-                                    <a href="shop-wishlist.php">
-                                        <img class="svgInject" alt="Surfside Media" src="assets/imgs/theme/icons/icon-heart.svg">
-                                        <span class="pro-count blue">4</span>
-                                    </a>
-                                </div>
+                               
 
                                 @livewire('cart-icon-component')
 
@@ -522,6 +517,32 @@
                             </li>
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('contact') }}">Contact</a></li>
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu.cart') }}">Cart</a>
+
+                                @auth
+                                <li class="menu-item-has-children"><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
+                                    
+                                    @if (Auth::user()->utype == 'ADM')
+                                    <ul class="dropdown">
+                                        <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                                        <li><a href="{{ route('admin.menus') }}">Menus</a></li>
+                                        {{-- {{ route('admin.categories') }} --}}
+                                        {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
+                                        <li><a href="#">Coupons</a></li>
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Customers</a></li>
+                                                                              
+                                    </ul>
+
+                                    @else
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                                                         
+                                    </ul>
+                                    @endif
+                                    
+                                </li>
+                                @endif
+
                             </li>
                         </ul>
                     </nav>
@@ -556,31 +577,7 @@
     {{ $slot }}
 
     <footer class="main">
-        <section class="newsletter p-30 text-white wow fadeIn animated">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mb-md-3 mb-lg-0">
-                        <div class="row align-items-center">
-                            <div class="col flex-horizontal-center">
-                                <img class="icon-email" src="assets/imgs/theme/icons/icon-email.svg" alt="">
-                                <h4 class="font-size-20 mb-0 ml-3">Sign up to Newsletter</h4>
-                            </div>
-                            <div class="col my-4 my-md-0 des">
-                                <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>$25 coupon for first shopping.</strong></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <!-- Subscribe Form -->
-                        <form class="form-subcriber d-flex wow fadeIn animated">
-                            <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
-                            <button class="btn bg-dark text-white" type="submit">Subscribe</button>
-                        </form>
-                        <!-- End Subscribe Form -->
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <section class="section-padding footer-mid">
             <div class="container pt-15 pb-20">
                 <div class="row">

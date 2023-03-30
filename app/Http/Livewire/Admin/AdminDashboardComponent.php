@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Order;
+use App\Models\User;
 use Livewire\Component;
 
 class AdminDashboardComponent extends Component
@@ -16,6 +17,7 @@ class AdminDashboardComponent extends Component
     }
     public function render()
     {
+        $pengguna = User::all();
         $orders = Order::orderBy('created_at', 'DESC')->paginate(10);
 
         $total_all_price = Order::sum('total_price'); //menghitung total semua transaksi
@@ -30,6 +32,6 @@ class AdminDashboardComponent extends Component
         //     dd($item->model->name);
         // }
 
-        return view('livewire.admin.admin-dashboard-component', ['orders' => $orders, 'total_all_price' =>  $total_all_price]);
+        return view('livewire.admin.admin-dashboard-component', ['orders' => $orders, 'total_all_price' =>  $total_all_price, 'pengguna' => $pengguna]);
     }
 }

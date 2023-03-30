@@ -1,17 +1,3 @@
-@php
-function convertDateDBtoIndo($string)
-{
-    // contoh : 2019-01-30
-
-    $bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-
-    $tanggal = explode('-', $string)[2];
-    $bulan = explode('-', $string)[1];
-    $tahun = explode('-', $string)[0];
-
-    return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
-}
-@endphp
 <div>
     <style>
         nav svg{
@@ -62,7 +48,7 @@ function convertDateDBtoIndo($string)
                             
                             <div class="pl-30">
                                 <h4 class="mb-5 fw-500">
-                                    total revenue = Rp.{{ $total_all_price }}
+                                    pengguna = {{ $pengguna->count() }} 
                                 </h4>
                             </div>
                         </div>
