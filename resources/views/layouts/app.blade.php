@@ -76,9 +76,9 @@
                     </div>
                     <div class="header-right">
                         <div class="search-style-1">
-                            <form action="#">                                
+                            {{-- <form action="#">                                
                                 <input type="text" placeholder="Search for items...">
-                            </form>
+                            </form> --}}
                         </div>
                         <div class="header-action-right">
                             <div class="header-action-2">
@@ -458,10 +458,10 @@
             </div>
             <div class="mobile-header-content-area">
                 <div class="mobile-search search-style-3 mobile-header-border">
-                    <form action="#">
+                    {{-- <form action="#">
                         <input type="text" placeholder="Search for items…">
                         <button type="submit"><i class="fi-rs-search"></i></button>
-                    </form>
+                    </form> --}}
                 </div>
                 <div class="mobile-menu-wrap mobile-header-border">
                     <div class="main-categori-wrap mobile-header-border">
