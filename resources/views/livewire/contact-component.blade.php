@@ -13,7 +13,7 @@
                 <div class="col-xl-8 col-lg-10 m-auto">
                     <div class="contact-from-area padding-20-row-col wow FadeInUp">
                         <h3 class="mb-10 text-center">Drop Us a Line of Feedback or message</h3>
-                        <p class="text-muted mb-30 text-center font-sm">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="text-muted mb-30 text-center font-sm">contact and feedback form</p>
                         <form class="contact-form-style text-center" id="contact-form" action="#" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
