@@ -350,7 +350,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog </a></li>                                    
+                                    <li><a href="{{ route('contact') }}">Contact</a></li>                                    
                                     <li><a href="{{ route('menu.cart') }}">Cart</a></li>
                                     @auth
                                     <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
@@ -490,8 +490,8 @@
                     <!-- mobile menu start -->
                     <nav>
                         <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Home</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="shop.html">shop</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('home.index') }}">Home</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu') }}">Menu</a></li>
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Our Collections</a>
                                 <ul class="dropdown">
                                     <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Women's Fashion</a>
@@ -520,14 +520,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="blog.html">Blog</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Language</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">German</a></li>
-                                    <li><a href="#">Spanish</a></li>
-                                </ul>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('contact') }}">Contact</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu.cart') }}">Cart</a>
                             </li>
                         </ul>
                     </nav>

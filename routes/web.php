@@ -11,6 +11,7 @@ use App\Http\Livewire\Admin\AdminAddMenuComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditMenuComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\ContactComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 Route::get('/', HomeComponent::class)->name('home.index');
 Route::get('/menu', MenuComponent::class)->name('menu');
 Route::get('/cart', CartComponent::class)->name('menu.cart');
+Route::get('/contact', ContactComponent::class)->name('contact');
 
 //route untuk pembayaran
 Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
