@@ -17,7 +17,7 @@ class MenuFactory extends Factory
      */
     public function definition(): array
     {
-        $menu_name = $this->faker->unique()->words($nb = 5, $asText = true);
+        $menu_name = $this->faker->unique()->words($nb = 2, $asText = true);
         $slug = Str::slug($menu_name, '-');
         return [
             'name' => $menu_name,

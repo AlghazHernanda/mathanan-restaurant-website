@@ -41,14 +41,14 @@
                    </div>
                </div>
                <div class="col-md-6 col-lg-4">
-                   <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
+                   {{-- <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
                        
                        <div class="pl-30">
                            <h4 class="mb-5 fw-500">
                                total revenue = Rp.{{ $total_all_price }}
                            </h4>
                        </div>
-                   </div>
+                   </div> --}}
                </div>
              
            </div>
@@ -82,13 +82,20 @@
                                            $i = ($orders->currentPage()-1)*$orders->perPage();
                                        @endphp --}}
                                        @foreach ($orders as $order)
+                                       @php
+                                            $order->cart = json_decode($order->cart);
+                                       @endphp
                                        @if ($order->status_antar === 'SUDAH')
                                            <tr>
                                                <td> 1 </td>
                                                <td>{{ $order->phonenumber }}</td>
                                                {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
                                                <td>{{ $order->name }}</td>
-                                               <td>Cart</td>
+                                               <td>
+                                                @foreach ($order->cart as $item)
+                                                menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
+                                                @endforeach
+                                               </td>
                                                <td>{{ $order->total_price }}</td>
                                                <td>{{ $order->status }}</td>
                                                <td>{{ $order->status_antar }}</td>
@@ -138,13 +145,20 @@
                                            $i = ($orders->currentPage()-1)*$orders->perPage();
                                        @endphp --}}
                                        @foreach ($orders as $order)
+                                       {{-- @php
+                                            $order->cart = json_decode($order->cart);
+                                       @endphp --}}
                                        @if ($order->status_antar === 'BELUM')
                                            <tr>
                                                <td> 1 </td>
                                                <td>{{ $order->phonenumber }}</td>
                                                {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
                                                <td>{{ $order->name }}</td>
-                                               <td>Cart</td>
+                                               <td>
+                                                @foreach ($order->cart as $item)
+                                                menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
+                                                @endforeach
+                                               </td>
                                                <td>{{ $order->total_price }}</td>
                                                <td>{{ $order->status }}</td>
                                                <td>{{ $order->status_antar }}</td>
