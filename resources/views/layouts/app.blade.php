@@ -300,7 +300,7 @@
                                             <li><a href="{{ route('admin.menus') }}">Menus</a></li>
                                             {{-- {{ route('admin.categories') }} --}}
                                             {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
-                                            <li><a href="#">Coupons</a></li>
+                                            <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
                                             <li><a href="#">Orders</a></li>
                                             <li><a href="#">Customers</a></li>
                                                                                   

@@ -11,6 +11,7 @@ use App\Http\Livewire\Admin\AdminAddMenuComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditMenuComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminMessageComponent;
 use App\Http\Livewire\ContactComponent;
 
 /*
@@ -48,6 +49,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 // route untuk admin dan sudah dilindungin oleh middleware
 Route::middleware(['auth', 'authadmin'])->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/message', AdminMessageComponent::class)->name('admin.message');
 
     Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
     Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');
