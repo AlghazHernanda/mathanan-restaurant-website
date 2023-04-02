@@ -70,10 +70,10 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>phonenumber</th>
-                                            <th>Name</th>
-                                            <th>cart</th>
-                                            <th>total price</th>
+                                            <th>Nomor Telepon</th>
+                                            <th>Nama</th>
+                                            <th>pesanan</th>
+                                            <th>total harga</th>
                                             <th>status bayar</th>
                                             <th>status antar</th>
                                             <th>tanggal</th>
@@ -85,13 +85,20 @@
                                             $i = ($orders->currentPage()-1)*$orders->perPage();
                                         @endphp
                                         @foreach ($orders as $order)
+                                        @php
+                                        $order->cart = json_decode($order->cart);
+                                        @endphp
                                         @if ($order->status_antar === 'SUDAH')
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $order->phonenumber }}</td>
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
                                                 <td>{{ $order->name }}</td>
-                                                <td>Cart</td>
+                                                <td>
+                                                    @foreach ($order->cart as $item)
+                                                    menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
+                                                    @endforeach
+                                                </td>
                                                 <td>{{ $order->total_price }}</td>
                                                 <td>{{ $order->status }}</td>
                                                 <td>{{ $order->status_antar }}</td>
@@ -142,9 +149,7 @@
 
                                         @endphp
                                         @foreach ($orders as $order)
-                                        @php
-                                            $order->cart = json_decode($order->cart);
-                                        @endphp
+                                       
                                         @if ($order->status_antar === 'BELUM')
                                             <tr>
                                                 <td>{{ ++$i }}</td>
