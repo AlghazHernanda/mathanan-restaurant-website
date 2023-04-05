@@ -121,7 +121,7 @@
                                             {{-- {{ route('admin.categories') }} --}}
                                             {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
                                             <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
-                                            <li><a href="#">Orders</a></li>
+                                            <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
                                             <li><a href="#">Customers</a></li>
                                                                                   
                                         </ul>
@@ -129,6 +129,7 @@
                                         @else
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                            <li><a href="{{ route('profile.edit') }}">User Profile</a></li>
                                                                              
                                         </ul>
                                         @endif
@@ -226,6 +227,44 @@
                         <input type="text" placeholder="Search for items…">
                         <button type="submit"><i class="fi-rs-search"></i></button>
                     </form> --}}
+                </div>
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu">
+                          
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="/">Home</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="about.html">About</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu') }}">Menu</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('contact') }}">Contact</a></li>
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu.cart') }}">Cart</a></li> 
+
+                            @auth
+                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">My Account</a>
+                                @if (Auth::user()->utype == 'ADM')
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ route('admin.menus') }}">Menus</a></li>
+                                    {{-- {{ route('admin.categories') }} --}}
+                                    {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
+                                    <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
+                                    <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
+                                    <li><a href="#">Customers</a></li>
+                                                                          
+                                </ul>
+
+                                @else
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ route('profile.edit') }}">User Profile</a></li>
+                                                                     
+                                </ul>
+                                @endif
+                            </li>
+                            @endif
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
                 </div>
                
                 <div class="mobile-header-info-wrap mobile-header-border">
