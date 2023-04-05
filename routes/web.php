@@ -48,6 +48,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // route untuk admin dan sudah dilindungin oleh middleware
 Route::middleware(['auth', 'authadmin'])->group(function () {
+    // kalo pake /admin, logo image di navbar tidak muncul
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/message', AdminMessageComponent::class)->name('admin.message');
 
