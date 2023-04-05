@@ -291,14 +291,28 @@
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
+                        @auth
                         <h5 class="widget-title wow fadeIn animated">My Account</h5>
+                        @if (Auth::user()->utype == 'ADM')
                         <ul class="footer-list wow fadeIn animated">
-                            <li><a href="my-account.html">My Account</a></li>
-                            <li><a href="#">View Cart</a></li>
-                            <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>                            
-                            <li><a href="#">Order</a></li>
+                            <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ route('admin.menus') }}">Menus</a></li>
+                            {{-- {{ route('admin.categories') }} --}}
+                            {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
+                            <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
+                            <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
+                            <li><a href="#">Customers</a></li>
+                                                                  
                         </ul>
+
+                        @else
+                        <ul class="sub-menu">
+                            <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ route('profile.edit') }}">User Profile</a></li>
+                                                             
+                        </ul>
+                        @endif
+                        @endif
                     </div>
                     <div class="col-lg-4 mob-center">
                         <h5 class="widget-title wow fadeIn animated">Install App</h5>
