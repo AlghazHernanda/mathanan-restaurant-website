@@ -249,6 +249,7 @@
     </div>        
     {{-- home-component --}}
     {{ $slot }}
+    {{-- @yield('content') @if( isset($slot) ) {{ $slot }} @endif --}}
 
     <footer class="main">
        
