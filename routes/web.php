@@ -6,6 +6,7 @@ use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\Admin\AdminAddAdmin;
 use App\Http\Livewire\Admin\AdminMenuComponent;
 use App\Http\Livewire\Admin\AdminAddMenuComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
@@ -51,6 +52,7 @@ Route::middleware(['auth', 'authadmin'])->group(function () {
     // kalo pake /admin, logo image di navbar tidak muncul
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/message', AdminMessageComponent::class)->name('admin.message');
+    Route::get('/admin/addadmin', AdminAddAdmin::class)->name('admin.addadmin');
 
     Route::get('/admin/menus', AdminMenuComponent::class)->name('admin.menus');
     Route::get('/admin/menu/add', AdminAddMenuComponent::class)->name('admin.menu.add');

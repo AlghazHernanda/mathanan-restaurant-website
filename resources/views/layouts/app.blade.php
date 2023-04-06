@@ -122,7 +122,7 @@
                                             {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
                                             <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
                                             <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
-                                            <li><a href="#">Customers</a></li>
+                                            <li><a href="{{ route('admin.addadmin') }}">Add Admin</a></li>
                                                                                   
                                         </ul>
 
@@ -204,7 +204,7 @@
                                     {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
                                     <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
                                     <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
-                                    <li><a href="#">Customers</a></li>
+                                    <li><a href="{{ route('admin.addadmin') }}">Add Admin</a></li>
                                                                           
                                 </ul>
 
@@ -302,7 +302,7 @@
                             {{-- <li><a href=" {{ route('admin.categories') }}">Categories</a></li> --}}
                             <li><a href="{{ route('admin.message') }}">Message & feedback</a></li>
                             <li><a href="{{ route('profile.edit') }}">Admin Profile</a></li>
-                            <li><a href="#">Customers</a></li>
+                            <li><a href="{{ route('admin.addadmin') }}">Add Admin</a></li>
                                                                   
                         </ul>
 
