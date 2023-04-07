@@ -64,10 +64,15 @@
                                                 <td>{{ $user->address }}</td>
                                                 <td>{{ $user->created_at->toDayDateTimeString() }}</td>                                               
                                                 <td>
+                                                    @if ($user->utype == "USR")
                                                     <a href="#"   wire:click.prevent="addAdmin({{ $user->id}})" class="btn btn-brand text-white btn-shadow-brand hover-up btn-lg">Tambah Admin</a> 
-                                                    <br><br>
-                                                    <a href="#"   wire:click.prevent="addUser({{ $user->id}})" class="btn btn-brand text-white btn-shadow-brand hover-up btn-lg">Tambah User</a>
-                                                    {{-- <a href="#" class="text-danger"  wire:click.prevent="deleteuser({{ $user->id}})" style="margin-left: 20px;">Delete</a> --}}
+                                                    @else
+                                                    <a href="#"   wire:click.prevent="addAdmin({{ $user->id}})" class="btn btn-brand text-white btn-shadow-brand hover-up btn-lg">Tambah User</a> 
+                                                    @endif
+                                                   
+                                                    {{-- <br><br>
+                                                    <a href="#"   wire:click.prevent="addUser({{ $user->id}})" class="btn btn-brand text-white btn-shadow-brand hover-up btn-lg">Tambah User</a> --}}
+                                              
                                                 </td>
                                             </tr>
                                          

@@ -19,9 +19,16 @@ class AdminAddAdmin extends Component
     public function addAdmin($user_id)
     {
         $user = User::find($user_id);
-        $user->utype = 'ADM';
-        $user->save();
-        session()->flash('message', 'admin berhasil ditambahkan');
+        // jika user tipenya "USR" maka jalankan if ini untuk mengubah jadi admin
+        if ($user->utype == "USR") {
+            $user->utype = 'ADM';
+            $user->save();
+            session()->flash('message', 'admin berhasil ditambahkan');
+        } else {
+            $user->utype = 'USR';
+            $user->save();
+            session()->flash('message', 'user berhasil ditambahkan');
+        }
     }
 
     public function render()
