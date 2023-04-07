@@ -15,6 +15,7 @@ class AdminAddAdmin extends Component
         session()->flash('message', 'user berhasil ditambahkan');
     }
 
+    //fungsi untuk add admin
     public function addAdmin($user_id)
     {
         $user = User::find($user_id);
