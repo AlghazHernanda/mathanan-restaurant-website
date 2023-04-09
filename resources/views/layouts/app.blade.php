@@ -300,7 +300,7 @@
                         </ul>
 
                         @else
-                        <ul class="sub-menu">
+                        <ul class="footer-list wow fadeIn animated">
                             <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
                             <li><a href="{{ route('profile.edit') }}">User Profile</a></li>
                                                              
