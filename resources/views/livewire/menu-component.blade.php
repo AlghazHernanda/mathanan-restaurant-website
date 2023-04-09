@@ -59,9 +59,9 @@
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="wishlist.php"><i class="fi-rs-heart"></i></a>
                                             <a aria-label="Compare" class="action-btn hover-up" href="compare.php"><i class="fi-rs-shuffle"></i></a>
                                         </div>
-                                        <div class="product-badges product-badges-position product-badges-mrg">
+                                        {{-- <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <div class="product-content-wrap">
                                         <div class="product-category">
