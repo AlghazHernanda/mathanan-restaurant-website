@@ -74,7 +74,7 @@
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span> {{ $menu->regular_price }}</span>
+                                            <span>Rp{{ format_uang($menu->regular_price) }}</span>
                                             {{-- <span class="old-price">$245.8</span> --}}
                                         </div>
                                         <div class="product-action-1 show">

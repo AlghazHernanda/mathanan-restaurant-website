@@ -24,7 +24,7 @@
                    <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
                        <div class="pl-30">
                            <h4 class="mb-5 fw-500">
-                               total transaksi = Rp. {{ $total_all_price }}
+                               total transaksi = Rp{{ format_uang($total_all_price) }}
                            </h4>
        
                        </div>
@@ -96,7 +96,7 @@
                                                 menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
                                                 @endforeach
                                                </td>
-                                               <td>{{ $order->total_price }}</td>
+                                               <td>Rp{{ format_uang($order->total_price) }}</td>
                                                <td>{{ $order->status }}</td>
                                                <td>{{ $order->status_antar }}</td>
                                                <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
@@ -159,7 +159,7 @@
                                                 menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
                                                 @endforeach
                                                </td>
-                                               <td>{{ $order->total_price }}</td>
+                                               <td>Rp{{ format_uang($order->total_price) }}</td>
                                                <td>{{ $order->status }}</td>
                                                <td>{{ $order->status_antar }}</td>
                                                <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               

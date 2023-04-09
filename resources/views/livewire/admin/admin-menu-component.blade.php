@@ -57,7 +57,7 @@
                                                 <td><img src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" width="60" alt="{{ $menu->name }}"></td>
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/menu-') }}{{ $menu->id }}-1.jpg" width="60" alt="{{ $menu->name }}"></td> --}}
                                                 <td>{{ $menu->name }}</td>
-                                                <td>{{ $menu->regular_price }}</td>
+                                                <td>Rp{{ format_uang($menu->regular_price) }}</td>
                                                 <td>{{ $menu->created_at }}</td>                                               
                                                 <td>
                                                     <a href="{{ route('admin.menu.edit',['menu_id'=>$menu->id]) }}" class="text-info">Edit</a>
