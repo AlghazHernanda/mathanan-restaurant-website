@@ -61,7 +61,8 @@ class OrderController extends Controller
             'snapToken' => $snapToken,
             'name' => $request->name,
             'phonenumber' => $request->phonenumber,
-            'total_price' => $request->total_price
+            'total_price' => $request->total_price,
+            'address' => $request->address
         ]);
     }
 

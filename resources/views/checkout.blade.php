@@ -21,38 +21,154 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="my-3">Toko Durian</h1>
-        <div class="card" style="width: 18rem;">
-            <img src="{{asset('assets/img/durian.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Detail Pesanan</h5>
-                <table>
-                    <tr>
-                        <td>Nama</td>
-                        <td> : {{$name}}</td>
-                    </tr>
-                    <tr>
-                        <td>No Hp</td>
-                        <td> : {{$phonenumber}}</td>
-                    </tr>
-                    {{-- <tr>
-                        <td>Alamat</td>
-                        <td> : {{$order->address}}</td>
-                    </tr>
-                    <tr>
-                        <td>Qty</td>
-                        <td> : {{$order->qty}}</td>
-                    </tr> --}}
-                    <tr>
-                        <td>Total Harga</td>
-                        <td> : {{$total_price}}</td>
-                    </tr>
-                </table>
-                <button class="btn btn-primary mt-3" id="pay-button">Bayar Sekarang</button>
-            </div>
-        </div>
-    </div>
+   <style>
+    body{
+	background-color: #ffffff;
+
+}
+.container{
+	width: 600px;
+	background-color: #fff;
+	padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.card{
+	background-color: #fff;
+	width: 300px;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.name{
+	font-size: 15px;
+	color: #403f3f;
+	font-weight: bold;
+}
+.cross{
+	font-size: 11px;
+	color: #b0aeb7;
+}
+.pin{
+	font-size: 14px;
+	color: #b0aeb7;
+}
+.first{
+	border-radius: 8px;
+	border: 1.5px solid #78b9ff;
+	color: #000;
+	background-color: #eaf4ff;
+}
+.second{
+	border-radius: 8px;
+	border: 1px solid #acacb0;
+	color: #000;
+	background-color: #fff;
+}
+.dot{
+
+}
+.head{
+	color: #137ff3;
+	font-size: 12px;
+}
+.dollar{
+	font-size: 18px;
+	color: #097bf7;
+}
+.amount{
+	color: #007bff;
+	font-weight: bold;
+	font-size: 18px;
+
+}
+.form-control{
+	font-size: 18px;
+	font-weight: bold;
+	width: 60px;
+	height: 28px;
+
+}
+.back{
+	color: #aba4a4;
+	font-size: 15px;
+	line-height: 73px;
+	font-weight: 400;
+}
+.button{
+	width: 150px;
+	height: 60px;
+	border-radius: 8px;
+	font-size: 17px;		
+}
+
+   </style>
+    <div class="container d-flex justify-content-center mt-5">
+	<div class="card">
+		
+
+
+		<div>
+			<div class="d-flex pt-3 pl-3">
+			{{-- <div><img src="https://img.icons8.com/ios-filled/50/000000/visa.png" width="60" height="80" /></div> --}}
+			
+		    </div>
+
+
+        <div class="py-2  px-3">
+          {{-- <div class="mt-3 pl-2"><span class="name">{{$name}}</span><div><span class="pin ml-2">{{$phonenumber}}</span></div></div> --}}
+		    	<div class="second pl-2 d-flex py-2">
+			    <div class="form-check">
+				
+			    </div>
+          <div class="border-left pl-2"><span class="head">Name</span><div class="d-flex"><span class="dollar"></span>{{ $name }}</div></div>
+
+		         </div>
+		    </div>
+
+        <div class="py-2  px-3">
+		    	<div class="first pl-2 d-flex py-2">
+			    <div class="form-check">
+				
+			    </div>
+			    <div class="border-left pl-2"><span class="head">Nomor Telepon</span><div><span class="dollar"></span><span class="amount">{{$phonenumber}}</span></div></div>
+
+		         </div>
+		    </div>
+
+
+		    <div class="py-2  px-3">
+		    	<div class="second pl-2 d-flex py-2">
+			    <div class="form-check">
+				
+			    </div>
+          <div class="border-left pl-2"><span class="head">Alamat</span><div class="d-flex"><span class="dollar"></span>{{ $address }}</div></div>
+
+		         </div>
+		    </div>
+
+
+		     <div class="py-2  px-3">
+		    	<div class="first pl-2 d-flex py-2">
+			    <div class="form-check">
+				
+			    </div>
+          <div class="border-left pl-2"><span class="head">Total amount due</span><div><span class="dollar">Rp.</span><span class="amount">{{$total_price}}</span></div></div>
+
+		         </div> 
+		    </div>	
+
+
+		    	<div class="d-flex justify-content-between px-3 pt-4 pb-3">
+		    		<div><span class="back">Go back</span></div>
+		    		<button type="button" id="pay-button" class="btn btn-primary button">Pay amount</button>
+		    	</div>
+
+
+
+		</div>
+	</div>
+
+</div>
 
     <form action="" id="submit_form" method="POST">
         @csrf
