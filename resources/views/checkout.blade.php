@@ -26,6 +26,17 @@
 	background-color: #ffffff;
 
 }
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
 .container{
 	width: 600px;
 	background-color: #fff;
@@ -33,6 +44,7 @@
     padding-bottom: 100px;
 
 }
+
 .card{
 	background-color: #fff;
 	width: 300px;
@@ -152,14 +164,14 @@
 			    <div class="form-check">
 				
 			    </div>
-          <div class="border-left pl-2"><span class="head">Total amount due</span><div><span class="dollar">Rp.</span><span class="amount">{{$total_price}}</span></div></div>
+          <div class="border-left pl-2"><span class="head">Total amount due</span><div><span class="dollar">Rp.</span><span class="amount">{{format_uang($total_price)}}</span></div></div>
 
 		         </div> 
 		    </div>	
 
 
 		    	<div class="d-flex justify-content-between px-3 pt-4 pb-3">
-		    		<div><span class="back">Go back</span></div>
+		    		<a href="{{ route('menu.cart') }}"><div><span class="back">Go back</span></div></a>
 		    		<button type="button" id="pay-button" class="btn btn-primary button">Pay amount</button>
 		    	</div>
 
