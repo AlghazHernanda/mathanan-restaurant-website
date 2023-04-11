@@ -35,7 +35,7 @@
                                 <ul>
                                     <li>Mathanan menyajikan menu yang berkualitas <a href="{{ route('menu') }}">Lihat Menu</a></li>
                                     <li>Dijamin Lezat dan Bergizi</li>
-                                    <li>Punya Pertanyaan? <a href="shop.html">Shop now</a></li>
+                                    <li>Punya Pertanyaan? <a href="{{ route('contact') }}">Silahkan Bertanya</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img src="{{  asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
+                        <a href="index.html"><img width="50" src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-1">
@@ -90,7 +90,7 @@
             <div class="container">
                 <div class="header-wrap header-space-between position-relative">
                     <div class="logo logo-width-1 d-block d-lg-none">
-                        <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
+                        <a href="index.html"><img class="logo-img" src="assets/imgs/logo/mathanan.jpeg" alt="logo"></a>
                     </div>
                     <div class="header-nav d-none d-lg-flex">
                         
@@ -252,7 +252,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="widget-about font-md mb-md-5 mb-lg-0">
                             <div class="logo logo-width-1 wow fadeIn animated">
-                                <a href="index.html"><img src="{{  asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
+                                <a href="index.html"><img src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                             </div>
                             <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contact</h5>
                             <p class="wow fadeIn animated">
@@ -309,18 +309,18 @@
                         @endif
                     </div>
                     <div class="col-lg-4 mob-center">
-                        <h5 class="widget-title wow fadeIn animated">Install App</h5>
+                        <h5 class="widget-title wow fadeIn animated">Payment</h5>
                         <div class="row">
-                            <div class="col-md-8 col-lg-12">
+                            {{-- <div class="col-md-8 col-lg-12">
                                 <p class="wow fadeIn animated">From App Store or Google Play</p>
                                 <div class="download-app wow fadeIn animated mob-app">
                                     <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active" src="assets/imgs/theme/app-store.jpg" alt=""></a>
                                     <a href="#" class="hover-up"><img src="assets/imgs/theme/google-play.jpg" alt=""></a>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">
                                 <p class="mb-20 wow fadeIn animated">Secured Payment Gateways</p>
-                                <img class="wow fadeIn animated" src="assets/imgs/theme/payment-method.png" alt="">
+                                <img class="wow fadeIn animated" width="300" src={{  asset('assets/imgs/theme/midtrans.jpg') }} alt="">
                             </div>
                         </div>
                     </div>
