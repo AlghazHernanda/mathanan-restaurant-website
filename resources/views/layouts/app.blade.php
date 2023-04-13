@@ -98,7 +98,7 @@
                             <nav>
                                 <ul>
                                     <li><a class="active" href="/">Home </a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    {{-- <li><a href="about.html">About</a></li> --}}
                                     {{-- {{ route('shop') }} --}}
                                     <li><a href="{{ route('menu') }}">Menu</a></li>
                                    
@@ -182,7 +182,7 @@
                         <ul class="mobile-menu">
                           
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="/">Home</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="about.html">About</a></li>
+                            {{-- <li class="menu-item-has-children"><span class="menu-expand"></span><a href="about.html">About</a></li> --}}
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu') }}">Menu</a></li>
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('contact') }}">Contact</a></li>
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('menu.cart') }}">Cart</a></li> 
