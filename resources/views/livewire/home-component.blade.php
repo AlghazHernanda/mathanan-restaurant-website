@@ -14,10 +14,10 @@
                     <div class="col-lg-6 align-self-center mb-lg-0 mb-4">
                         <h6 class="mt-0 mb-15 text-uppercase font-sm text-brand wow fadeIn animated">Mathanan Restaurant</h6>
                         <h1 class="font-heading mb-40">
-                            We are Building The Destination For Getting Things Done
+                           Kami Menyediakan Makanan yang lezat dan bergizi
                         </h1>
-                        <p>Tempus ultricies augue luctus et ut suscipit. Morbi arcu, ultrices purus dolor erat bibendum sapien metus.</p>
-                        <p>Tempus ultricies augue luctus et ut suscipit. Morbi arcu, ultrices purus dolor erat bibendum sapien metus. Sit mi, pharetra, morbi arcu id. Pellentesque dapibus nibh augue senectus. </p>
+                        <p>Mathanan adalah usaha penjualan makanan yang sudah berdiri sejak tahun 2020, Mathanan saat ini sudah mempunyai cabang di Pantai Indah Kapuk (PIK) dan juga dijalankan dirumah daffa madri atha untuk pemesanan di kota Cikarang dan sekitarnya.</p>
+                        <p>Mathanan saat ini berjualan dan menerima pesanan secara offline dan online. Untuk pemesanan offline dilakukan didaerah Pantai Indah Kapuk (PIK) dan untuk pemesanan online dilakukan di kota Cikarang. </p>
                     </div>
                     <div class="col-lg-6">
                         <img src="assets/imgs/page/tempat4.jpeg" alt="">

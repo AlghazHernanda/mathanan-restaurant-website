@@ -54,7 +54,7 @@
                                         @foreach ($menus as $menu )
                                             <tr>
                                                 <td>{{ ++$i }}</td>
-                                                <td><img src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" width="60" alt="{{ $menu->name }}"></td>
+                                                <td><img src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" width="100" alt="{{ $menu->name }}"></td>
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/menu-') }}{{ $menu->id }}-1.jpg" width="60" alt="{{ $menu->name }}"></td> --}}
                                                 <td>{{ $menu->name }}</td>
                                                 <td>Rp{{ format_uang($menu->regular_price) }}</td>
