@@ -134,7 +134,9 @@
                         </div>
                     </div>
                     <div class="hotline d-none d-lg-block">
-                        <p><i class="fi-rs-smartphone"></i><span>Toll Free</span> (+1) 0000-000-000 </p>
+                        @foreach ($admins as $admin)
+                        <p><i class="fi-rs-smartphone"></i>(+62) {{ $admin->phonenumber }} </p>
+                        @endforeach
                     </div>
                     <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
                     <div class="header-action-right d-block d-lg-none">
@@ -255,20 +257,26 @@
                                 <a href="index.html"><img src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                             </div>
                             <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contact</h5>
+
+                            @foreach ($admins as $admin)
+                        
                             <p class="wow fadeIn animated">
-                                <strong>Address: </strong>562 Wellington Road
+                                <strong>Address: </strong>{{ $admin->address }}
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Phone: </strong>+1 0000-000-000
+                                <strong>Phone: </strong>{{ $admin->phonenumber }}
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Email: </strong>contact@surfsidemedia.in
+                                <strong>Email: </strong>{{ $admin->email }}
                             </p>
+
+                            @endforeach
+
                             <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                             <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
                                 <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
                                 <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
+                                <a href="https://www.instagram.com/mathananstreet/"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
                                 <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
                                 <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
                             </div>
@@ -334,12 +342,12 @@
                 </div>
                 <div class="col-lg-6">
                     <p class="float-md-left font-sm text-muted mb-0">
-                        <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a>
+                        {{-- <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a> --}}
                     </p>
                 </div>
                 <div class="col-lg-6">
                     <p class="text-lg-end text-start font-sm text-muted mb-0">
-                        &copy; <strong class="text-brand">SurfsideMedia</strong> All rights reserved
+                        &copy; <strong class="text-brand">Mathanan</strong> All rights reserved
                     </p>
                 </div>
             </div>
