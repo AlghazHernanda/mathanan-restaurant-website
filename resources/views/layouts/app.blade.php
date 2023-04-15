@@ -90,7 +90,7 @@
             <div class="container">
                 <div class="header-wrap header-space-between position-relative">
                     <div class="logo logo-width-1 d-block d-lg-none">
-                        <a href="index.html"><img class="logo-img" src="assets/imgs/logo/mathanan.jpeg" alt="logo"></a>
+                        <a href="index.html"><img class="logo-img" src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                     </div>
                     <div class="header-nav d-none d-lg-flex">
                         
@@ -162,7 +162,7 @@
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
                 <div class="mobile-header-logo">
-                    <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                 </div>
                 <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                     <button class="close-style search-close">
@@ -218,15 +218,28 @@
                 </div>
                
                 <div class="mobile-header-info-wrap mobile-header-border">
-                    <div class="single-mobile-header-info mt-30">
+                    {{-- <div class="single-mobile-header-info mt-30">
                         <a href="contact.html"> Our location </a>
-                    </div>
+                    </div> --}}
+                    @auth
                     <div class="single-mobile-header-info">
-                        <a href="login.html">Log In </a>                        
+                        <a href="">{{ Auth::user()->name }}</a>                        
+                    </div>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <div class="single-mobile-header-info">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">log out</a>                  
+                        </div>
+                    </form>
+                       
+                    @else
+                    <div class="single-mobile-header-info">
+                        <a href="{{ route('login') }}">Log In </a>                        
                     </div>
                     <div class="single-mobile-header-info">                        
-                        <a href="register.html">Sign Up</a>
+                        <a href="{{ route('register') }}">Sign Up</a>
                     </div>
+                    @endauth
                     <div class="single-mobile-header-info">
                         <a href="#">(+1) 0000-000-000 </a>
                     </div>
