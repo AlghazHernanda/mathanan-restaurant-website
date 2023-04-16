@@ -13,9 +13,9 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         // ini buat ngepaksa https ngrok bisa ngebuka laravel yg local, agar css nya muncul
-        if (env(key: 'APP_ENV') == 'local') {
-            URL::forceScheme(scheme: 'https');
-        }
+        // if (env(key: 'APP_ENV') == 'local') {
+        //     URL::forceScheme(scheme: 'https');
+        // }
 
         // if ($this->app->environment('local')) {
         //     $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
