@@ -42,7 +42,7 @@
                                             {{-- <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.
                                             </p> --}}
                                         </td>
-                                        <td class="price" data-title="Price"><span>{{ $item->model->regular_price }}</span></td>
+                                        <td class="price" data-title="Price"><span>Rp{{ format_uang($item->model->regular_price) }}</span></td>
                                         <td class="text-center" data-title="Stock">
                                             <div class="detail-qty border radius  m-auto">
                                                 <a href="#" class="qty-down"  wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')" ><i class="fi-rs-angle-small-down"></i></a>
@@ -51,7 +51,7 @@
                                             </div>
                                         </td>
                                         <td class="text-right" data-title="Cart">
-                                            <span>{{ $item->subtotal }}</span>
+                                            <span>Rp{{ format_uang($item->subtotal) }}</span>
                                         </td>
                                         <td class="action" data-title="Remove"><a href="#" class="text-muted" wire:click.prevent="destroy('{{ $item->rowId }}')"><i class="fi-rs-trash"></i></a></td>
                                     </tr>
@@ -91,11 +91,11 @@
                                                     <tbody>
                                                         <tr>
                                                             <td class="cart_total_label">Cart Subtotal</td>
-                                                            <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{ Cart::subtotal() }}</span></td>
+                                                            <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">Rp{{ Cart::subtotal() }}</span></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="cart_total_label">Tax</td>
-                                                            <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{ Cart::tax() }}</span></td>
+                                                            <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">Rp{{ Cart::tax() }}</span></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="cart_total_label">Name</td>
@@ -125,7 +125,7 @@
 
                                                         <tr>
                                                             <td class="cart_total_label">Total</td>
-                                                            <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">${{ Cart::total() }}</span></strong></td>
+                                                            <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">Rp{{ Cart::total() }}</span></strong></td>
                                                         </tr>
 
                                                         <input type="hidden" name="cart" value="{{ Cart::content() }}">
@@ -154,11 +154,11 @@
                                                 <tbody>
                                                     <tr>
                                                         <td class="cart_total_label">Cart Subtotal</td>
-                                                        <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{ Cart::subtotal() }}</span></td>
+                                                        <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">Rp{{ Cart::subtotal() }}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Tax</td>
-                                                        <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{ Cart::tax() }}</span></td>
+                                                        <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">Rp{{ Cart::tax() }}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Name</td>
@@ -186,7 +186,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Total</td>
-                                                        <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">${{ Cart::total() }}</span></strong></td>
+                                                        <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">Rp{{ Cart::total() }}</span></strong></td>
                                                     </tr>
 
                                                     <input type="hidden" name="cart" value="{{ Cart::content() }}">
