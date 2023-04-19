@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -14,26 +13,23 @@
     {{-- jquery CDN 3 buat ngambil js_callback --}}
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
-    <title>Toko Durian</title>
+	
+    <title>Mathanan Restaurant</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
-
 <body>
    <style>
     body{
 	background-color: #ffffff;
-
 }
 a {
-    color: #0060B6;
+    color: #F15412;
     text-decoration: none;
 }
-
 a:hover 
 {
-     color:#00A0C6; 
+     color:#F15412; 
      text-decoration:none; 
      cursor:pointer;  
 }
@@ -44,7 +40,6 @@ a:hover
     padding-bottom: 100px;
 
 }
-
 .card{
 	background-color: #fff;
 	width: 300px;
@@ -66,7 +61,7 @@ a:hover
 }
 .first{
 	border-radius: 8px;
-	border: 1.5px solid #78b9ff;
+	border: 1.5px solid #F15412;
 	color: #000;
 	background-color: #eaf4ff;
 }
@@ -80,15 +75,15 @@ a:hover
 
 }
 .head{
-	color: #137ff3;
+	color: #F15412;
 	font-size: 12px;
 }
 .dollar{
 	font-size: 18px;
-	color: #097bf7;
+	color: #F15412;
 }
 .amount{
-	color: #007bff;
+	color: #F15412;
 	font-weight: bold;
 	font-size: 18px;
 
@@ -117,20 +112,15 @@ a:hover
     <div class="container d-flex justify-content-center mt-5">
 	<div class="card">
 		
-
-
 		<div>
 			<div class="d-flex pt-3 pl-3">
 			{{-- <div><img src="https://img.icons8.com/ios-filled/50/000000/visa.png" width="60" height="80" /></div> --}}
-			
 		    </div>
-
 
         <div class="py-2  px-3">
           {{-- <div class="mt-3 pl-2"><span class="name">{{$name}}</span><div><span class="pin ml-2">{{$phonenumber}}</span></div></div> --}}
 		    	<div class="second pl-2 d-flex py-2">
-			    <div class="form-check">
-				
+			    <div class="form-check">	
 			    </div>
           <div class="border-left pl-2"><span class="head">Name</span><div class="d-flex"><span class="dollar"></span>{{ $name }}</div></div>
 
@@ -140,13 +130,11 @@ a:hover
         <div class="py-2  px-3">
 		    	<div class="first pl-2 d-flex py-2">
 			    <div class="form-check">
-				
 			    </div>
 			    <div class="border-left pl-2"><span class="head">Nomor Telepon</span><div><span class="dollar"></span><span class="amount">{{$phonenumber}}</span></div></div>
 
 		         </div>
 		    </div>
-
 
 		    <div class="py-2  px-3">
 		    	<div class="second pl-2 d-flex py-2">
@@ -154,10 +142,8 @@ a:hover
 				
 			    </div>
           <div class="border-left pl-2"><span class="head">Alamat</span><div class="d-flex"><span class="dollar"></span>{{ $address }}</div></div>
-
 		         </div>
 		    </div>
-
 
 		     <div class="py-2  px-3">
 		    	<div class="first pl-2 d-flex py-2">
@@ -169,17 +155,13 @@ a:hover
 		         </div> 
 		    </div>	
 
-
 		    	<div class="d-flex justify-content-between px-3 pt-4 pb-3">
-		    		<a href="{{ route('menu.cart') }}"><div><span class="back">Go back</span></div></a>
-		    		<button type="button" id="pay-button" class="btn btn-primary button">Pay amount</button>
+		    		<a href="{{ route('menu.cart') }}"><div><span class="back">Go Back</span></div></a>
+		    		<button type="button" id="pay-button" class="btn btn-warning button">Pay amount</button>
 		    	</div>
-
-
 
 		</div>
 	</div>
-
 </div>
 
     <form action="" id="submit_form" method="POST">
@@ -188,7 +170,6 @@ a:hover
          send_response_to_form(result) --}}
         <input type="hidden" name="json" id="json_callback">
     </form>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -234,7 +215,6 @@ a:hover
         //submit hasil nya ke hidden form melalui id "submit_form"
         $('#submit_form').submit();
       }
-
     </script>
 </body>
 
