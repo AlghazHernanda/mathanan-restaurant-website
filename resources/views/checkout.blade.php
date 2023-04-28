@@ -177,7 +177,6 @@ a:hover
 
     <script type="text/javascript">
         // For example trigger on button clicked, or any time you need
-        // For example trigger on button clicked, or any time you need
       var payButton = document.getElementById('pay-button');
       payButton.addEventListener('click', function () {
 
