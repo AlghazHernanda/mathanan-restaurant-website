@@ -46,6 +46,7 @@ class RegisteredUserController extends Controller
             'phonenumber' =>  $request->phonenumber,
         ]);
 
+        //send email confirmation
         event(new Registered($user));
 
         Auth::login($user);
