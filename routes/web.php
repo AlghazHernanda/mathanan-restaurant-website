@@ -40,6 +40,7 @@ Route::post('/checkout', [OrderController::class, 'payment_post']);
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+//verified berguna untuk verifikasi email
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
