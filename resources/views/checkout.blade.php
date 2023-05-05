@@ -150,7 +150,7 @@ a:hover
 			    <div class="form-check">
 				
 			    </div>
-          <div class="border-left pl-2"><span class="head">Total amount due</span><div><span class="dollar">Rp.</span><span class="amount">{{format_uang($total_price)}}</span></div></div>
+          <div class="border-left pl-2"><span class="head">Total amount due</span><div><span class="dollar">Rp.</span><span class="amount">{{$total_price}}</span></div></div>
 
 		         </div> 
 		    </div>	
