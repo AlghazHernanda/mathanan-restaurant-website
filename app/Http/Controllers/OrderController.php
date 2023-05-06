@@ -43,10 +43,13 @@ class OrderController extends Controller
         // Set 3DS transaction for credit card to true
         \Midtrans\Config::$is3ds = true;
 
+        $str =  $request->total_price;
+        $val = (float) str_replace(',', '', $str);
+
         $params = array(
             'transaction_details' => array(
                 'order_id' => rand(),
-                'gross_amount' => $request->total_price,
+                'gross_amount' => $val,
             ),
             'customer_details' => array(
                 'first_name' => $request->name,
