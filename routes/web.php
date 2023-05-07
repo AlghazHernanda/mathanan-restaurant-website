@@ -48,7 +48,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// route untuk admin dan sudah dilindungin oleh middleware
+// route untuk admin dan sudah dilindungin oleh middleware, authadmin dibuat manual
 Route::middleware(['auth', 'authadmin'])->group(function () {
     // kalo pake /admin, logo image di navbar tidak muncul
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
