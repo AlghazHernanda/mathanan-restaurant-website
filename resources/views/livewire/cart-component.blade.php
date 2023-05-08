@@ -100,26 +100,26 @@
                                                         <tr>
                                                             <td class="cart_total_label">Name</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="name" name="name" value="{{ Auth::user()->name }}">
+                                                                <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" required>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="cart_total_label">Email</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="email" name="email" value="{{ Auth::user()->email }}">
+                                                                <input type="text" id="email" name="email" value="{{ Auth::user()->email }}" required>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="cart_total_label">Phone Number</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="number" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}">
+                                                                <input type="number" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}" required>
                                                             </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td class="cart_total_label">Address</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="address" name="address"  value="{{ Auth::user()->address }}">
+                                                                <input type="text" id="address" name="address"  value="{{ Auth::user()->address }}" required>
                                                             </td>
                                                         </tr>
 
@@ -163,25 +163,25 @@
                                                     <tr>
                                                         <td class="cart_total_label">Name</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="name" name="name">
+                                                            <input type="text" id="name" name="name" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Email</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="email" name="email">
+                                                            <input type="text" id="email" name="email" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Phone Number</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="number" id="name" name="phonenumber">
+                                                            <input type="number" id="name" name="phonenumber" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Address</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="address" name="address">
+                                                            <input type="text" id="address" name="address" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
