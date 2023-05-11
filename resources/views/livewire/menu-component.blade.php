@@ -48,16 +48,18 @@
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             {{-- {{ route('menu.details',['slug'=>$menu->slug]) }} --}}
-                                            <a href="">
+                                            <a href="{{ route('menu.details',['slug'=>$menu->slug]) }}">
                                                 <img class="default-img" src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" alt="{{ $menu->name}}">
                                                 <img class="hover-img" src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" alt="{{ $menu->name}}">
+                                                
                                             </a>
                                         </div>
                                         <div class="product-action-1">
-                                            <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                <i class="fi-rs-search"></i></a>
-                                            <a aria-label="Add To Wishlist" class="action-btn hover-up" href="wishlist.php"><i class="fi-rs-heart"></i></a>
-                                            <a aria-label="Compare" class="action-btn hover-up" href="compare.php"><i class="fi-rs-shuffle"></i></a>
+                                            {{-- <img class="pop" src="{{ asset('assets/imgs/menu') }}/{{ $menu->image }}" alt="{{ $menu->name}}"> --}}
+                                            {{-- <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                                <i class="fi-rs-search"></i></a> --}}
+                                            {{-- <a aria-label="Add To Wishlist" class="action-btn hover-up" href="wishlist.php"><i class="fi-rs-heart"></i></a>
+                                            <a aria-label="Compare" class="action-btn hover-up" href="compare.php"><i class="fi-rs-shuffle"></i></a> --}}
                                         </div>
                                         {{-- <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
@@ -70,7 +72,7 @@
                                         <h2><a href="product-details.html">{{ $menu->name }}</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
-                                                <span>90%</span>
+                                                {{-- <span>90%</span> --}}
                                             </span>
                                         </div>
                                         <div class="product-price">

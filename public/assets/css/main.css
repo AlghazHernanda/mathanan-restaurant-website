@@ -3374,7 +3374,33 @@ table .product-thumbnail img {
   padding: 10px 12px;
   overflow: hidden;
   max-height: 320px;
+
+  /* untuk full size image */
+  /* background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; */
 }
+
+/* untuk pop up gambar menu */
+.pop{
+  border: 1px solid #000 ;
+  border-radius: 15%;
+  width: 200px;
+  height: 200px;
+}
+  .pop:active{
+  width:1500px ;
+  height:1500px;
+  position:relative;
+  right: -65px;
+  top: 200px ;
+  background-color:#000;
+  }
+
+  
 
 .product-cart-wrap .product-img-action-wrap .product-img {
   position: relative;
@@ -4536,6 +4562,13 @@ table .product-thumbnail img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.tengah {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .product-detail-rating {
