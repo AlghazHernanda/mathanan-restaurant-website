@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // ini buat ngepaksa https ngrok bisa ngebuka laravel yg local, agar css nya muncul
+        // //ini buat ngepaksa https ngrok bisa ngebuka laravel yg local, agar css nya muncul
         // if (env(key: 'APP_ENV') == 'local') {
         //     URL::forceScheme(scheme: 'https');
         // }
