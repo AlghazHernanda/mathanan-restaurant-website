@@ -4,16 +4,17 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MenuComponent;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\ContactComponent;
+use App\Http\Livewire\DetailsComponent;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminAddAdmin;
+use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Admin\AdminMenuComponent;
 use App\Http\Livewire\Admin\AdminAddMenuComponent;
+use App\Http\Livewire\Admin\AdminMessageComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditMenuComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
-use App\Http\Livewire\Admin\AdminMessageComponent;
-use App\Http\Livewire\ContactComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::get('/contact', ContactComponent::class)->name('contact');
 Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 //memanggil fungsi secara hidden dihalaman checkout
 Route::post('/checkout', [OrderController::class, 'payment_post']);
+
+Route::get('/menu/{slug}', DetailsComponent::class)->name('menu.details');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

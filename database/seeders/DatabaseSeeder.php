@@ -74,12 +74,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Menu::create([
+            'name' => "Sop Iga Sapi",
+            'slug' => "Sop-Iga-Sapi",
+            'description' => "Sop Iga Sapi",
+            'regular_price' => 30000,
+            'quantity' => 1,
+            'image' => 'menu-15.jpeg',
+        ]);
+
+        Menu::create([
             'name' => "Soto Medan Ayam",
             'slug' => "Soto-Medan-Ayam",
             'description' => "Soto Medan Ayam",
             'regular_price' => 20000,
             'quantity' => 1,
-            'image' => 'menu-2.jpeg',
+            'image' => 'menu-16.jpeg',
         ]);
 
         Menu::create([
@@ -88,25 +97,7 @@ class DatabaseSeeder extends Seeder
             'description' => "Soto Medan Daging",
             'regular_price' => 25000,
             'quantity' => 1,
-            'image' => 'menu-4.jpeg',
-        ]);
-
-        Menu::create([
-            'name' => "Sop Iga Sapi",
-            'slug' => "Sop-Iga-Sapi",
-            'description' => "Sop Iga Sapi",
-            'regular_price' => 30000,
-            'quantity' => 1,
-            'image' => 'menu-5.jpeg',
-        ]);
-
-        Menu::create([
-            'name' => "Sop Buntut",
-            'slug' => "Sop-Buntut",
-            'description' => "Sop Buntut",
-            'regular_price' => 50000,
-            'quantity' => 1,
-            'image' => 'menu-6.jpeg',
+            'image' => 'menu-16.jpeg',
         ]);
 
         Menu::create([
@@ -134,6 +125,15 @@ class DatabaseSeeder extends Seeder
             'regular_price' => 45000,
             'quantity' => 1,
             'image' => 'menu-10.jpeg',
+        ]);
+
+        Menu::create([
+            'name' => "Sop Buntut",
+            'slug' => "Sop-Buntut",
+            'description' => "Sop Buntut",
+            'regular_price' => 50000,
+            'quantity' => 1,
+            'image' => 'menu-14.jpeg',
         ]);
     }
 }
