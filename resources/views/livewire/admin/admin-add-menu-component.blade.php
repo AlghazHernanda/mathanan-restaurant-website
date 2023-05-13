@@ -94,9 +94,10 @@
                                     <label for="image" class="form-label">menu Image</label>
                                     <input type="file" id="image" name="image" class="form-control" wire:model="image">
                                     @if ($image)
-                                        <img src="{{ $image->temporaryUrl() }}" width="120">
+                                    <img src="{{ $image }}" width="120">
+                                       
                                         @else
-                                        <img src="{{ $image }}" width="120">
+                                        <img src="{{ $image->temporaryUrl() }}" width="120">
                                     @endif
                                     @error('image')
                                         <p class="text-danger">{{ $message }}</p>
