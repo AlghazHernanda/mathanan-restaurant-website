@@ -45,7 +45,8 @@ class AdminAddMenuComponent extends Component
             'description' => 'required',
             'regular_price' => 'required|numeric',
             'quantity' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,png,JPEG',
+            'image' => 'required',
+            // |mimes:jpeg,png,JPEG'
         ]);
 
         $menu = new Menu();
