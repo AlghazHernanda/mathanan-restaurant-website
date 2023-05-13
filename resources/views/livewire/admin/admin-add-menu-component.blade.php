@@ -96,7 +96,7 @@
                                     @if ($image)
                                         <img src="{{ $image->temporaryUrl() }}" width="120">
                                         @else
-                                        <img src="{{ $menu->image }}" width="120">
+                                        <img src="{{ $image }}" width="120">
                                     @endif
                                     @error('image')
                                         <p class="text-danger">{{ $message }}</p>
