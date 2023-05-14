@@ -38,6 +38,7 @@ class AdminAddMenuComponent extends Component
 
     public function addMenu()
     {
+        ddd($this->all());
         // validasi secara realtime sebelum user mencet submit
         $this->validate([
             'name' => 'required',
