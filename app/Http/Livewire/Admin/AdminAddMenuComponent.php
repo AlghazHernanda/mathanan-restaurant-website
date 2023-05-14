@@ -45,7 +45,7 @@ class AdminAddMenuComponent extends Component
             'description' => 'required',
             'regular_price' => 'required|numeric',
             'quantity' => 'required|numeric',
-            // 'image' => 'required|mimes:jpeg,png,jpg|image',
+            'image' => 'required|mimes:jpeg,png,jpg|image',
         ]);
 
         $menu = new Menu();
@@ -56,7 +56,7 @@ class AdminAddMenuComponent extends Component
         $menu->featured = $this->featured;
         $menu->quantity = $this->quantity;
         $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        $this->image->storeAs('menu', $imageName);
+        $this->image->storeAs('', $imageName);
         $menu->image =  $imageName;
         $menu->save();
         session()->flash('message', 'menu has been created suceessefully!');
