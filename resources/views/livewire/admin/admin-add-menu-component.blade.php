@@ -100,9 +100,9 @@
 
                                      {{-- @else
                                         {{-- <img src="{{ $image }}" width="120"> --}}
-                                    @error('image')
+                                    {{-- @error('image')
                                         <p class="text-danger">{{ $message }}</p>
-                                    @enderror
+                                    @enderror --}}
                                 </div>
 
                                 <button type="submit" class="btn btn-primary float-end">Submit</button>

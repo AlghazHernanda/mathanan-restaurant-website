@@ -38,29 +38,28 @@ class AdminAddMenuComponent extends Component
 
     public function addMenu()
     {
-        // // validasi secara realtime sebelum user mencet submit
-        // $this->validate([
-        //     'name' => 'required',
-        //     'slug' => 'required|unique:menus',
-        //     'description' => 'required',
-        //     'regular_price' => 'required|numeric',
-        //     'quantity' => 'required|numeric',
-        //     'image' => 'required|mimes:jpeg,png,jpg|image',
-        // ]);
+        // validasi secara realtime sebelum user mencet submit
+        $this->validate([
+            'name' => 'required',
+            'slug' => 'required|unique:menus',
+            'description' => 'required',
+            'regular_price' => 'required|numeric',
+            'quantity' => 'required|numeric',
+            'image' => 'required|mimes:jpeg,png,jpg|image',
+        ]);
 
-        // $menu = new Menu();
-        // $menu->name = $this->name;
-        // $menu->slug = $this->slug;
-        // $menu->description = $this->description;
-        // $menu->regular_price = $this->regular_price;
-        // $menu->featured = $this->featured;
-        // $menu->quantity = $this->quantity;
-        // $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        // $this->image->storeAs('', $imageName);
-        // $menu->image =  $imageName;
-        // $menu->save();
-        // session()->flash('message', 'menu has been created suceessefully!');
-        return "halo";
+        $menu = new Menu();
+        $menu->name = $this->name;
+        $menu->slug = $this->slug;
+        $menu->description = $this->description;
+        $menu->regular_price = $this->regular_price;
+        $menu->featured = $this->featured;
+        $menu->quantity = $this->quantity;
+        $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
+        $this->image->storeAs('', $imageName);
+        $menu->image =  $imageName;
+        $menu->save();
+        session()->flash('message', 'menu has been created suceessefully!');
     }
 
     public function render()
