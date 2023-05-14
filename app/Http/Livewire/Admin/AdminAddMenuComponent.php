@@ -60,8 +60,7 @@ class AdminAddMenuComponent extends Component
         $menu->quantity = $this->quantity;
 
         $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        $string = str_replace("", "", $imageName);
-        $this->image->storeAs('', $string);
+        $this->image->storeAs('', $imageName);
         $menu->image =  $imageName;
 
 
