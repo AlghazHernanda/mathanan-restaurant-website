@@ -19,6 +19,9 @@ class AdminAddMenuComponent extends Component
     public $quantity;
     public $image;
 
+    public $storedImage;
+
+
     public function generateSlug()
     {
         $this->slug = Str::slug($this->name);
@@ -38,7 +41,6 @@ class AdminAddMenuComponent extends Component
 
     public function addMenu()
     {
-        ddd($this->all());
         // validasi secara realtime sebelum user mencet submit
         $this->validate([
             'name' => 'required',
@@ -57,9 +59,13 @@ class AdminAddMenuComponent extends Component
         $menu->featured = $this->featured;
         $menu->quantity = $this->quantity;
 
-        $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        $this->image->storeAs('', $imageName);
-        $menu->image =  $imageName;
+        // $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
+        // $this->image->storeAs('', $imageName);
+        // $menu->image =  $imageName;
+
+        $this->storedImage = $this->image->store('menu');
+        $menu->image = $this->storedImage;
+
 
         $menu->save();
         session()->flash('message', 'menu has been created suceessefully!');
