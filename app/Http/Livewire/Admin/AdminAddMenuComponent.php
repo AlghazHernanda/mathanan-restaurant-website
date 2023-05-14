@@ -32,7 +32,7 @@ class AdminAddMenuComponent extends Component
             'description' => 'required',
             'regular_price' => 'required|numeric',
             'quantity' => 'required|numeric',
-            // 'image' => 'required|mimes:jpeg,png',
+            'image' => 'required|mimes:jpeg,png',
         ]);
     }
 
@@ -45,7 +45,7 @@ class AdminAddMenuComponent extends Component
             'description' => 'required',
             'regular_price' => 'required|numeric',
             'quantity' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,png,jpg|image',
+            // 'image' => 'required|mimes:jpeg,png,jpg|image',
         ]);
 
         $menu = new Menu();
