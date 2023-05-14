@@ -92,7 +92,7 @@
 
                                 <div class="mb-3 mt-3">
                                     <label for="image" class="form-label">menu Image</label>
-                                    <input type="file" id="image" name="image" class="form-control" wire:model="image">
+                                    <input type="file" name="image" class="form-control" wire:model="image">
                                     {{-- @if ($image)
                                     <img src="{{ $image->temporaryUrl() }}" width="120">
                                   
@@ -100,9 +100,9 @@
 
                                      {{-- @else
                                         {{-- <img src="{{ $image }}" width="120"> --}}
-                                    {{-- @error('image')
+                                    @error('image')
                                         <p class="text-danger">{{ $message }}</p>
-                                    @enderror --}}
+                                    @enderror
                                 </div>
 
                                 <button type="submit" class="btn btn-primary float-end">Submit</button>
