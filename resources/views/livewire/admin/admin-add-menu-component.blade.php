@@ -36,7 +36,7 @@
                             </div>
                             <div class="card-body">
                                
-                               <form wire:submit.prevent="addMenu">
+                               <form wire:submit.prevent="addMenu" enctype="multipart/form-data">
                                 <div class="mb-3 mt-3">
                                     <label for="name" class="form-label">menu Name</label>
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Enter menu Name.." wire:model="name" wire:keyup="generateSlug">
