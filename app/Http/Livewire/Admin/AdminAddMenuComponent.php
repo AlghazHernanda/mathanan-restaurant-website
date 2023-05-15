@@ -64,7 +64,7 @@ class AdminAddMenuComponent extends Component
 
         if ($this->image) {
             $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $this->image->getClientOriginalName());
-            $this->image->move(public_path('assets/imgs/menu'), $filename);
+            $this->image->storeAs('', $filename);
         }
         $menu->image = $filename;
 
