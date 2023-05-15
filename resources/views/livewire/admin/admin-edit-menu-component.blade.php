@@ -92,14 +92,14 @@
                                 <div class="mb-3 mt-3">
                                     <label for="image" class="form-label">menu Image</label>
                                     <input type="file" id="image" name="image" class="form-control" wire:model="newimage">
-                                    @if ($newimage)
+                                    {{-- @if ($newimage)
                                         <img src="{{ $newimage->temporaryUrl() }}" width="120">
                                     @else
                                     <img src="{{ asset('assets/imgs/menu') }}/{{$image}}" width="120">
                                     @endif
                                     @error('newimage')
                                         <p class="text-danger">{{ $message }}</p>
-                                    @enderror
+                                    @enderror --}}
                                 </div>
 
                     
