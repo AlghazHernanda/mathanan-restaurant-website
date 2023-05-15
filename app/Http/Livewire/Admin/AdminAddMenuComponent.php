@@ -63,7 +63,7 @@ class AdminAddMenuComponent extends Component
         // $menu->image =  $imageName;
 
         if ($this->image && $this->image->isValid()) {
-            $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
+            $imageName = "halo.jpeg";
             $this->image->storeAs('', $imageName);
             $menu->image = $imageName;
         }
