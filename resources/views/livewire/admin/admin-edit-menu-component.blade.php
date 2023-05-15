@@ -100,10 +100,10 @@
                                     @error('newimage')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror --}}
-                                    <img src="{{ asset('assets/imgs/menu') }}/{{$image}}" width="120">
+                                    {{-- <img src="{{ asset('assets/imgs/menu') }}/{{$image}}" width="120">
                                     @error('newimage')
                                         <p class="text-danger">{{ $message }}</p>
-                                    @enderror
+                                    @enderror --}}
                                 </div>
 
                     
