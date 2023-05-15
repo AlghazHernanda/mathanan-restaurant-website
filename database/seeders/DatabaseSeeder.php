@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             'name' => "Nasi Briyani ayam",
             'slug' => "Nasi-Briyani-ayam",
             'description' => "Nasi Briyani Ayam",
-            'regular_price' => 25000,
+            'regular_price' => 2500,
             'quantity' => 1,
             'image' => 'menu-1.jpeg',
         ]);
