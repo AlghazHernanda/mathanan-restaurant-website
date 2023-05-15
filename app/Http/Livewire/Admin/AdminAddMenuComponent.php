@@ -58,13 +58,17 @@ class AdminAddMenuComponent extends Component
         $menu->featured = $this->featured;
         $menu->quantity = $this->quantity;
 
-        // $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
+        $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
         // $this->image->storeAs('', $imageName);
         // $menu->image =  $imageName;
 
-        // $imageName = Carbon::now()->timestamp . '.' . $this->image->extension();
-        $this->image->storeAs('', $this->image->getClientOriginalName());
-        $menu->image =  $this->image->getClientOriginalName();
+        if ($this->image) {
+            $this->image->storeAs('', $imageName);
+            $menu->image = $imageName;
+        }
+
+        // $this->image->storeAs('', $this->image->getClientOriginalName());
+        // $menu->image =  $this->image->getClientOriginalName();
 
         // ddd($menu);
 
