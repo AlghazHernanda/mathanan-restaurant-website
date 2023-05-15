@@ -61,12 +61,11 @@ class AdminEditMenuComponent extends Component
         $menu->regular_price = $this->regular_price;
         $menu->featured = $this->featured;
         $menu->quantity = $this->quantity;
-
         if ($this->newimage) {
             unlink('assets/imgs/menu/' . $menu->image);
-            $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $this->image->getClientOriginalName());
-            $this->image->storeAs('', $filename);
-            $menu->image = $filename;
+            $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $this->newimage->getClientOriginalName());
+            $image = $this->newimage->storeAs('', $filename);
+            $menu->image = $image;
         }
 
         $menu->save();
