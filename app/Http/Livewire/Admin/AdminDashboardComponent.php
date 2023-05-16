@@ -20,6 +20,7 @@ class AdminDashboardComponent extends Component
         $pengguna = User::all();
         $orders = Order::orderBy('created_at', 'DESC')->paginate(10);
 
+        //menghitung total harga yang status nya sudah dibayar
         $total_all_price = Order::where('status', 'settlement')->sum('total_price'); //menghitung total semua transaksi
 
         //logic untuk ngambil data cart dari database
