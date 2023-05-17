@@ -15,6 +15,15 @@ class AdminDashboardComponent extends Component
         $order->save();
         session()->flash('message', 'data berhasil diubah');
     }
+
+    public function deleteorder($order_id)
+    {
+        // ddd($order_id);
+        $menu = Order::find($order_id);
+        //untuk delete gambar
+        $menu->delete();
+        session()->flash('message', 'order has been deleted successfully!');
+    }
     public function render()
     {
         $pengguna = User::all();

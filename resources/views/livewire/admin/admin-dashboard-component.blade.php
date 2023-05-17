@@ -164,8 +164,9 @@
                                                 <td>{{ $order->status_antar }}</td>
                                                 <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
                                                 <td>
-                                                    <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Sudah di antar</a>
-                                                    {{-- <a href="#" class="text-danger"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a> --}}
+                                                    <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Akan di <br> antar?</a>
+                                                    <br><br>
+                                                    <a href="#" class="button"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a>
                                                 </td>
                                             </tr>
                                             @endif 
