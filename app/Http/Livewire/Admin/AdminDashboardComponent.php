@@ -26,6 +26,7 @@ class AdminDashboardComponent extends Component
     }
     public function render()
     {
+        //ambil semua user
         $pengguna = User::all();
         $orders = Order::orderBy('created_at', 'DESC')->paginate(10);
 
