@@ -15,6 +15,7 @@ class AdminMenuComponent extends Component
     public function deleteMenu($menu_id)
     {
         // ddd($menu_id);
+        //cari menu berdasarkan id nya
         $menu = Menu::find($menu_id);
         //untuk delete gambar
         unlink('assets/imgs/menu/' . $menu->image);
