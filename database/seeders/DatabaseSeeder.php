@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-
+        //create seeder menu
         Menu::create([
             'name' => "Nasi Briyani ayam",
             'slug' => "Nasi-Briyani-ayam",
