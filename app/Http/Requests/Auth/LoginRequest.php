@@ -60,6 +60,7 @@ class LoginRequest extends FormRequest
      */
     public function ensureIsNotRateLimited(): void
     {
+        //jika lebih dari 3 kali salah password maka kena ratelimiter
         if (!RateLimiter::tooManyAttempts($this->throttleKey(), 3)) {
             return;
         }
