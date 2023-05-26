@@ -138,7 +138,7 @@
                         <p><i class="fi-rs-smartphone"></i>(+62) {{ $admin->phonenumber }} </p>
                         @endforeach
                     </div>
-                    <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
+                    <p class="mobile-promotion">Mathanan <span class="text-brand">menyediakan</span>. makanan yang berkualitas</p>
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
                            
