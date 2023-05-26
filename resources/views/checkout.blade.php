@@ -168,6 +168,11 @@ a:hover
         @csrf
         {{-- ini biar data payment bisa masuk ke database, jadi kita akalin pake id "json_callback" yang di olah pake kodingan func
          send_response_to_form(result) --}}
+		<input type="hidden" name="name" value="{{ $name }}">
+		<input type="hidden" name="email" value="{{ $email }}">
+		<input type="hidden" name="address" value="{{ $address }}">
+		<input type="hidden" name="cart" value="{{ $cart }}">
+		<input type="hidden" name="phonenumber" value="{{ $phonenumber }}">
         <input type="hidden" name="json" id="json_callback">
     </form>
 
