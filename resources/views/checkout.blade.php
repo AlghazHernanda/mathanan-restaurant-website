@@ -164,7 +164,7 @@ a:hover
 	</div>
 </div>
 
-    <form action="" id="submit_form" method="POST">
+    <form action="/checkout" id="submit_form" method="POST">
         @csrf
         {{-- ini biar data payment bisa masuk ke database, jadi kita akalin pake id "json_callback" yang di olah pake kodingan func
          send_response_to_form(result) --}}

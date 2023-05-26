@@ -79,7 +79,7 @@
 
                                 {{-- jika sudah login, tampilkan form yang ini --}}
                                 @auth
-                                    <form action="/checkout" method="GET">
+                                    <form action="/checkoutget" method="POST">
                                         @csrf
 
                                         <div class="border p-md-4 p-30 border-radius cart-totals">
