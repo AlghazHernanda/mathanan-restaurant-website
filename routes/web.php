@@ -32,7 +32,7 @@ Route::get('/menu', MenuComponent::class)->name('menu');
 Route::get('/cart', CartComponent::class)->name('menu.cart');
 Route::get('/contact', ContactComponent::class)->name('contact');
 
-//route untuk pembayaran
+//route untuk pembayaran, harus post karena data nya gaboleh dikirim lewat url atau GET
 Route::post('/checkoutget', [OrderController::class, 'checkout'])->name('checkout');
 //memanggil fungsi secara hidden dihalaman checkout
 Route::post('/checkout', [OrderController::class, 'payment_post']);
