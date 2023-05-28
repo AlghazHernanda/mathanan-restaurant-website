@@ -4,26 +4,33 @@
             {{ __('Delete Account') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600">
+        {{-- <p class="mt-1 text-sm text-gray-600">
             {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
-        </p>
+        </p> --}}
     </header>
-
-    @if (Auth::user()->utype == 'ADM')
+      {{-- <x-danger-button
+            x-data=""
+            x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+        >{{ __('Delete Account') }}</x-danger-button>
+       --}}
+    
+   
+     @if (Auth::user()->utype == 'ADM')
     <br>
     <br>
       <strong>tombol delete admin dihilangkan sementara saat blackbox testing</strong>  
     @else
-    <x-danger-button
-        x-data=""
-        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-    >{{ __('Delete Account') }}</x-danger-button>
-  
-
-    <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+    {{-- <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable> --}}
         <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
+            
             @csrf
             @method('delete')
+            {{-- <x-danger-button
+            x-data=""
+            x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+        >{{ __('Delete Account') }}</x-danger-button>
+       --}}
+    
 
             <h2 class="text-lg font-medium text-gray-900">
                 {{ __('Are you sure you want to delete your account?') }}
@@ -57,6 +64,6 @@
                 </x-danger-button>
             </div>
         </form>
-    </x-modal>
+    {{-- </x-modal> --}}
     @endif
 </section>
