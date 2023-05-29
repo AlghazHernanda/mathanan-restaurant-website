@@ -117,7 +117,7 @@
                 </div>
 
 
-                <div class="row">    
+                <div class="row mt-30 mb-30">    
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
@@ -164,9 +164,9 @@
                                                 <td>{{ $order->status_antar }}</td>
                                                 <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
                                                 <td>
-                                                    <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Akan di <br> antar?</a>
+                                                    <a href="#" wire:click.prevent="accept({{ $order->id}})" class="button" style="margin-left: 20px;">Antar?</a>
                                                     <br><br>
-                                                    <a href="#" class="button"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a>
+                                                    <a href="#" class="button"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Hapus</a>
                                                 </td>
                                             </tr>
                                             @endif 

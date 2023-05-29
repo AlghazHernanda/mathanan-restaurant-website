@@ -74,7 +74,7 @@
                                            <th>status bayar</th>
                                            <th>status antar</th>
                                            <th>tanggal</th>
-                                           <th>Action</th>
+                                           {{-- <th>Action</th> --}}
                                        </tr>
                                    </thead>
                                    <tbody>
@@ -116,7 +116,7 @@
                </div>
 
 
-               <div class="row">    
+               <div class="row mt-30 mb-30">    
                    <div class="col-12">
                        <div class="card">
                            <div class="card-header">
@@ -137,7 +137,7 @@
                                            <th>status bayar</th>
                                            <th>status antar</th>
                                            <th>tanggal</th>
-                                           <th>Action</th>
+                                           {{-- <th>Action</th> --}}
                                        </tr>
                                    </thead>
                                    <tbody>
