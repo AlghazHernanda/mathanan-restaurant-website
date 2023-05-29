@@ -1,4 +1,4 @@
-<section>
+<section class="container">
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}
@@ -59,7 +59,7 @@
             <x-input-error class="mt-2" :messages="$errors->get('phonenumber')" />
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="mt-10 mb-10">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
