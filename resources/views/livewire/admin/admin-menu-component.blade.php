@@ -60,8 +60,8 @@
                                                 <td>Rp{{ format_uang($menu->regular_price) }}</td>
                                                 <td>{{ $menu->created_at }}</td>                                               
                                                 <td>
-                                                    <a href="{{ route('admin.menu.edit',['menu_id'=>$menu->id]) }}" class="text-info">Edit</a>
-                                                    <a href="#" class="text-danger"  wire:click.prevent="deleteMenu({{ $menu->id}})" style="margin-left: 20px;">Delete</a>
+                                                    <a href="{{ route('admin.menu.edit',['menu_id'=>$menu->id]) }}" class="btn-default-edit-menu">Edit</a>
+                                                    <a href="#" class="btn-default-delete-menu "  wire:click.prevent="deleteMenu({{ $menu->id}})" style="margin-left: 20px;">Delete</a>
                                                 </td>
                                             </tr> 
                                         @endforeach

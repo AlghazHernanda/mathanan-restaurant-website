@@ -67,7 +67,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>Nomor Telepon</th>
                                             <th>Nama</th>
                                             <th>pesanan</th>
@@ -130,7 +130,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>phonenumber</th>
                                             <th>Name</th>
                                             <th>cart</th>

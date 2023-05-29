@@ -241,14 +241,14 @@
                     </div>
                     @endauth
                     <div class="single-mobile-header-info">
-                        <a href="#">(+1) 0000-000-000 </a>
+                        <a href="#">(+62) {{ $admin->phonenumber }} </a>
                     </div>
                 </div>
                 <div class="mobile-social-icon">
                     <h5 class="mb-15 text-grey-4">Follow Us</h5>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
+                    <a href="https://www.instagram.com/mathananstreet/"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
                     <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
                 </div>
