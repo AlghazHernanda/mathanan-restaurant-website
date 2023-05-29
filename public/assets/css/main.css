@@ -936,7 +936,7 @@ button.submit:hover, button[type='submit']:hover {
   background-color: #F15412;
 }
 
-.btn.btn-sm, .button.btn-sm {
+.btn.btn-sm, .button.btn-sm, .btn-default-edit-menu.btn-sm, .btn-default-delete-menu.btn-sm {
   padding: 8px 18px;
   font-size: 12px;
   text-transform: none;
