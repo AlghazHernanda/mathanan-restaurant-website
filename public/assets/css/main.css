@@ -799,6 +799,7 @@ h5.widget-title {
   letter-spacing: 0.5px;
 }
 
+/* untuk button delete menu */
 .btn-default-delete-menu {
   display: inline-block;
   border: 1px solid transparent;
