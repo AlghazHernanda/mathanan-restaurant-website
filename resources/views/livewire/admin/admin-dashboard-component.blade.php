@@ -155,6 +155,7 @@
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
                                                 <td>{{ $order->name }}</td>
                                                 <td>
+                                                    {{-- logika untuk munculin cart menu --}}
                                                     @foreach ($order->cart as $item)
                                                     menu : {{ $item->model->name}}, harga :  {{ $item->model->regular_price}}, jumlah :  {{ $item->qty}} <br>
                                                     @endforeach
