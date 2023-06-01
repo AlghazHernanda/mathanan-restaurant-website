@@ -150,6 +150,7 @@
                                        
                                         @if ($order->status_antar === 'BELUM')
                                             <tr>
+                                                {{-- untuk increment --}}
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $order->phonenumber }}</td>
                                                 {{--<td><img src="{{ asset('assets/imgs/shop/order-') }}{{ $order->id }}-1.jpg" width="60" alt="{{ $order->name }}"></td> --}}
