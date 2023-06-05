@@ -67,6 +67,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{-- untuk pagination --}}
                                 {{ $menus->links() }}
                             </div>
                         </div>
