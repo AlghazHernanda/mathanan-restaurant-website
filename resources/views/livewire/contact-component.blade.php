@@ -62,6 +62,7 @@
                                         @enderror
                                     </div>
 
+                                    {{-- pake kelas autou width --}}
                                     <button class="submit submit-auto-width" type="submit">Send message</button>
 
                                 </div>
