@@ -60,6 +60,7 @@ class OrderController extends Controller
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         // dd($snapToken);
 
+        //kirim data kehalaman checkout
         return view('checkout', [
             'snapToken' => $snapToken,
             'name' => $request->name,
