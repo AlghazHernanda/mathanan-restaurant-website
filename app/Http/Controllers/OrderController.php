@@ -57,6 +57,7 @@ class OrderController extends Controller
             ),
         );
 
+        //kirim snaptoken ke halaman
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         // dd($snapToken);
 
