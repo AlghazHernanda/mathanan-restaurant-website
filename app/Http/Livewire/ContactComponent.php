@@ -19,7 +19,7 @@ class ContactComponent extends Component
         $this->validate([
             'name' => 'required|max:64',
             'email' => 'required|email:dns',
-            'phonenumber' => 'required|numeric',
+            'phonenumber' => 'required|numeric|digits_between:10,12',
             'subject' => 'required',
             'message' => 'required',
         ]);

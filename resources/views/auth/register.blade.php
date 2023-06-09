@@ -27,7 +27,7 @@
           <div class="mt-4">
             <x-input-label for="phonenumber" :value="__('Phonenumber')" />
             <x-text-input id="phonenumber" class="block mt-1 w-full" type="number" name="phonenumber" :value="old('phonenumber')" required autocomplete="phonenumber" />
-            {{-- <x-input-error :messages="$errors->get('phonenumber')" class="mt-2" /> --}}
+            <x-input-error :messages="$errors->get('phonenumber')" class="mt-2" />
         </div>
 
         <!-- Password -->

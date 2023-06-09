@@ -36,9 +36,9 @@ class OrderController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'phonenumber' => 'required|numeric|digits_between:8,12',
+            'phonenumber' => 'required|numeric|digits_between:10,12',
             'address' => 'required',
-            'email' => 'required',
+            'email' => 'required|email:dns',
         ]);
 
         // Set your Merchant Server Key
