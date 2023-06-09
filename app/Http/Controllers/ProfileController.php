@@ -28,6 +28,10 @@ class ProfileController extends Controller
     {
         $request->user()->fill($request->validated());
 
+        //Metode isDirty('email') digunakan untuk memeriksa apakah nilai atribut 'email' pada objek pengguna telah diubah sejak 
+        //terakhir kali objek tersebut disimpan ke database.. 
+        //Jika nilai atribut 'email' telah diubah (nilai true dikembalikan oleh isDirty('email')), 
+        //maka kondisi if akan dieksekusi.
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
