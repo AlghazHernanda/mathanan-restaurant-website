@@ -47,9 +47,8 @@ class AdminEditMenuComponent extends Component
             'name' => 'required',
             'slug' => 'required',
             'description' => 'required',
-            'regular_price' => 'required',
-            'featured' => 'required',
-            'quantity' => 'required',
+            'regular_price' => 'required|numeric',
+            'quantity' => 'required|numeric',
             'image' => 'required',
         ]);
         // $menu = '';

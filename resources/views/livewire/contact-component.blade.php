@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="input-style mb-20">
-                                        <input name="phonenumber" placeholder="Your Phone" type="tel" wire:model="phonenumber">
+                                        <input name="phonenumber" placeholder="Your Phone" type="number" wire:model="phonenumber">
                                         @error('phonenumber')
                                         <p class="text-danger">{{ $message }}</p>
                                         @enderror

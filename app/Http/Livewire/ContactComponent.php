@@ -17,9 +17,9 @@ class ContactComponent extends Component
     {
         //validasi secara realtime sebelum user mencet submit
         $this->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'phonenumber' => 'required',
+            'name' => 'required|max:64',
+            'email' => 'required|email:dns',
+            'phonenumber' => 'required|numeric',
             'subject' => 'required',
             'message' => 'required',
         ]);
