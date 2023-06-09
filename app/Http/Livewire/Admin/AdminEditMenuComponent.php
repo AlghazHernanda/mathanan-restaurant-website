@@ -50,6 +50,7 @@ class AdminEditMenuComponent extends Component
             'regular_price' => 'required|numeric',
             'quantity' => 'required|numeric',
             // 'image' => 'required|mimes:jpeg,png,',
+            'image' => 'required',
         ]);
         // $menu = '';
 
