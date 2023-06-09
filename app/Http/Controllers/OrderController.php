@@ -34,6 +34,13 @@ class OrderController extends Controller
 
         // $order = Order::find('1');
 
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'phonenumber' => 'required|numeric|digits_between:8,12',
+            'address' => 'required',
+            'email' => 'required',
+        ]);
+
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -46,31 +53,36 @@ class OrderController extends Controller
         $str =  $request->total_price;
         $val = (float) str_replace(',', '', $str);
 
-        $params = array(
-            'transaction_details' => array(
-                'order_id' => rand(),
-                'gross_amount' => $val,
-            ),
-            'customer_details' => array(
-                'first_name' => $request->name,
-                'phone' => $request->phonenumber,
-            ),
-        );
+        // error handling jika user tidak memilih menu
+        if ($val <= 0) {
+            return back()->with('message', 'Harus Memilih Menu, Silahkan Coba Lagi');
+        } else {
+            $params = array(
+                'transaction_details' => array(
+                    'order_id' => rand(),
+                    'gross_amount' => $val,
+                ),
+                'customer_details' => array(
+                    'first_name' => $request->name,
+                    'phone' => $request->phonenumber,
+                ),
+            );
 
-        //kirim snaptoken ke halaman
-        $snapToken = \Midtrans\Snap::getSnapToken($params);
-        // dd($snapToken);
+            //kirim snaptoken ke halaman
+            $snapToken = \Midtrans\Snap::getSnapToken($params);
+            // dd($snapToken);
 
-        //kirim data kehalaman checkout
-        return view('checkout', [
-            'snapToken' => $snapToken,
-            'name' => $request->name,
-            'phonenumber' => $request->phonenumber,
-            'total_price' => $request->total_price,
-            'address' => $request->address,
-            'email' => $request->email,
-            'cart' => $request->cart
-        ]);
+            //kirim data kehalaman checkout
+            return view('checkout', [
+                'snapToken' => $snapToken,
+                'name' => $validatedData['name'],
+                'phonenumber' => $validatedData['phonenumber'],
+                'total_price' => $request->total_price,
+                'address' => $validatedData['address'],
+                'email' =>  $validatedData['email'],
+                'cart' => $request->cart
+            ]);
+        }
     }
 
     public function payment_post(Request $request)

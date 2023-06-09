@@ -74,6 +74,10 @@
                         </div>
                         <div class="divider center_icon mt-50 mb-50"><i class="fi-rs-fingerprint"></i></div>
                         <div class="row mb-50">
+
+                        @if(Session::has('message'))
+                            <div class="alert alert-danger" role="alert">{{ Session::get('message') }}</div>
+                          @endif
                            
                             <div class="col-lg-6 col-md-12">
 
@@ -106,7 +110,7 @@
                                                         <tr>
                                                             <td class="cart_total_label">Email</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="email" name="email" value="{{ Auth::user()->email }}" required>
+                                                                <input type="email" id="email" name="email" value="{{ Auth::user()->email }}" required>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -169,7 +173,7 @@
                                                     <tr>
                                                         <td class="cart_total_label">Email</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="email" name="email" required>
+                                                            <input type="email" id="email" name="email" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
