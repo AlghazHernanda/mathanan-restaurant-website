@@ -105,7 +105,7 @@
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror --}}
 
-                                    @error('image')
+                                    @error('newimage')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                                 </div>
