@@ -70,7 +70,7 @@
                                 </div>
 
                               
-                                <div class="mb-3 mt-3">
+                                {{-- <div class="mb-3 mt-3">
                                     <label for="featured" class="form-label"  wire:model='featured'>Featured</label>
                                     <select name="featured" id="featured" class="form-control">
                                         <option value="0">No</option>
@@ -79,11 +79,11 @@
                                     @error('featured')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
-                                </div>
+                                </div> --}}
 
                                 <div class="mb-3 mt-3">
                                     <label for="quantity" class="form-label">Quantity</label>
-                                    <input type="text" id="quantity" name="quantity" class="form-control" placeholder="quantity" wire:model="quantity">
+                                    <input type="number" id="quantity" name="quantity" class="form-control" placeholder="quantity" wire:model="quantity">
                                     @error('quantity')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
