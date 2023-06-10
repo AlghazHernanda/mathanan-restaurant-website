@@ -50,6 +50,7 @@ class OrderController extends Controller
         // Set 3DS transaction for credit card to true
         \Midtrans\Config::$is3ds = true;
 
+        //agar harga berubah jadi string
         $str =  $request->total_price;
         $val = (float) str_replace(',', '', $str);
 
