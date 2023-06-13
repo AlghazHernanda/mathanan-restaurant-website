@@ -116,7 +116,9 @@
                                                         <tr>
                                                             <td class="cart_total_label">Phone Number</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="number" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}" required>
+                                                                <input type="number" min="1"
+                                                                step="1"
+                                                                onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}" required>
                                                             </td>
                                                         </tr>
 
@@ -179,7 +181,9 @@
                                                     <tr>
                                                         <td class="cart_total_label">Phone Number</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="number" id="name" name="phonenumber" required>
+                                                            <input type="number" min="1"
+                                                            step="1"
+                                                            onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" id="name" name="phonenumber" required>
                                                         </td>
                                                     </tr>
                                                     <tr>

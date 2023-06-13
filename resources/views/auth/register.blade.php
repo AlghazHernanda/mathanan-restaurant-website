@@ -26,7 +26,9 @@
           <!-- phonenumber -->
           <div class="mt-4">
             <x-input-label for="phonenumber" :value="__('Phonenumber')" />
-            <x-text-input id="phonenumber" class="block mt-1 w-full" type="number" name="phonenumber" :value="old('phonenumber')" required autocomplete="phonenumber" />
+            <x-text-input id="phonenumber" min="1"
+            step="1"
+            onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" class="block mt-1 w-full" type="number" name="phonenumber" :value="old('phonenumber')" required autocomplete="phonenumber" />
             <x-input-error :messages="$errors->get('phonenumber')" class="mt-2" />
         </div>
 
