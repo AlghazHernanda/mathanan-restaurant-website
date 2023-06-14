@@ -46,6 +46,7 @@ class ProfileController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+        // sebelum delete akun harus masukin password dulu
         $request->validateWithBag('userDeletion', [
             'password' => ['required', 'current-password'],
         ]);
