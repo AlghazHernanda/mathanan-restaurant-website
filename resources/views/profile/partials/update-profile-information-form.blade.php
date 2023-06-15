@@ -22,7 +22,7 @@
         <div>
             <x-input-label for="name" :value="__('Nama')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-error class="mt-2 text-danger" :messages="$errors->get('name')" />
         </div>
 
         <div>
@@ -52,13 +52,13 @@
         <div>
             <x-input-label for="address" :value="__('Alamat')" />
             <x-text-input id="address" name="address" type="text" class="mt-1 block w-full" :value="old('address', $user->address)" required autofocus autocomplete="address" />
-            <x-input-error class="mt-2" :messages="$errors->get('address')" />
+            <x-input-error class="mt-2 text-danger" :messages="$errors->get('address')" />
         </div>
 
         <div>
             <x-input-label for="phonenumber" :value="__('Nomor Telepon')" />
             <x-text-input id="phonenumber" name="phonenumber" type="number" class="mt-1 block w-full" :value="old('phonenumber', $user->phonenumber)" required autofocus autocomplete="phonenumber" />
-            <x-input-error class="mt-2" :messages="$errors->get('phonenumber')" />
+            <x-input-error class="mt-2 text-danger" :messages="$errors->get('phonenumber')" />
         </div>
 
         <div class="mt-10 mb-10">
