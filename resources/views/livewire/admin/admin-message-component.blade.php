@@ -42,11 +42,11 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
+                                            <th>Nama</th>
                                             <th>Email</th>
-                                            <th>phonenumber</th>
-                                            <th>subject</th>
-                                            <th>message</th>
+                                            <th>Nomor Telepon</th>
+                                            <th>Subjek</th>
+                                            <th>Isi Pesan</th>
                                             <th>tanggal</th>
                                             {{-- <th>Action</th> --}}
                                         </tr>

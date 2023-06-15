@@ -37,14 +37,14 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>Nomor Telepon</th>
                                             <th>Nama</th>
                                             <th>email</th>
                                             <th>tipe akun</th>
                                             <th>alamat</th>
                                             <th>tanggal daftar</th>
-                                            <th>Action</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

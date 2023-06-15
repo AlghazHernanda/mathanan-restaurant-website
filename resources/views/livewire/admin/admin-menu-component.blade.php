@@ -39,12 +39,12 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Image</th>
-                                            <th>Name</th>
+                                            <th>Gambar</th>
+                                            <th>Nama Menu</th>
                                             {{-- <th>Stock</th> --}}
-                                            <th>Price</th>
-                                            <th>Date</th>
-                                            <th>Action</th>
+                                            <th>Harga</th>
+                                            <th>Tanggal</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
