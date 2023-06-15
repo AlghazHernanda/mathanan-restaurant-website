@@ -24,7 +24,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-md-6">                                    
-                                    Add New Categories                
+                                    <h2>Menu List</h2>                
                                     </div>
                                     <div class="col-md-6">
                                         <a href="{{ route('admin.menu.add') }}" class="btn btn-success float-end">Add New menu</a>
@@ -38,7 +38,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>Image</th>
                                             <th>Name</th>
                                             {{-- <th>Stock</th> --}}

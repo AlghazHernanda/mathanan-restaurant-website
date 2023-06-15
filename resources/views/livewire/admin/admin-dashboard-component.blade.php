@@ -25,7 +25,7 @@
                         <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
                             <div class="pl-30">
                                 <h4 class="mb-5 fw-500">
-                                    total revenue = Rp{{ format_uang($total_all_price) }}
+                                    Total Keuntungan = Rp{{ format_uang($total_all_price) }}
                                 </h4>
             
                             </div>
@@ -36,7 +36,7 @@
                             
                             <div class="pl-30">
                                 <h4 class="mb-5 fw-500">
-                                    total pesanan = {{ $orders->count() }}
+                                    Total Pesanan = {{ $orders->count() }}
                                 </h4>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             
                             <div class="pl-30">
                                 <h4 class="mb-5 fw-500">
-                                    pengguna = {{ $pengguna->count() }} 
+                                    Pengguna = {{ $pengguna->count() }} 
                                 </h4>
                             </div>
                         </div>
@@ -131,10 +131,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>phonenumber</th>
-                                            <th>Name</th>
-                                            <th>cart</th>
-                                            <th>total price</th>
+                                            <th>Nomor Telepon</th>
+                                            <th>Nama</th>
+                                            <th>pesanan</th>
+                                            <th>total harga</th>
                                             <th>status bayar</th>
                                             <th>status antar</th>
                                             <th>tanggal</th>
