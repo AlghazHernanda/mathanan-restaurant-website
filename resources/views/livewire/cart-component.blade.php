@@ -104,13 +104,23 @@
                                                         <tr>
                                                             <td class="cart_total_label">Name</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" required>
+                                                                <input type="text" id="name" name="name"
+                                                                class="form-control @error('name') is-invalid @enderror"
+                                                                 value="{{ Auth::user()->name }}" required>
+                                                                 @error('name')
+                                                                 <p class="text-danger">{{ $message }}</p>
+                                                                 @enderror
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td class="cart_total_label">Email</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="email" id="email" name="email" value="{{ Auth::user()->email }}" required>
+                                                                <input type="email" id="email" name="email"
+                                                                class="form-control @error('email') is-invalid @enderror"
+                                                                 value="{{ Auth::user()->email }}" required>
+                                                                @error('email')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                                @enderror
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -118,14 +128,23 @@
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
                                                                 <input type="number" min="1"
                                                                 step="1"
+                                                                class="form-control @error('phonenumber') is-invalid @enderror"
                                                                 onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" id="name" name="phonenumber" value="{{ Auth::user()->phonenumber }}" required>
+                                                                @error('phonenumber')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                                @enderror
                                                             </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td class="cart_total_label">Address</td>
                                                             <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                                <input type="text" id="address" name="address"  value="{{ Auth::user()->address }}" required>
+                                                                <input type="text" id="address" name="address"
+                                                                class="form-control @error('address') is-invalid @enderror"  
+                                                                value="{{ Auth::user()->address }}" required>
+                                                                @error('address')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                                @enderror
                                                             </td>
                                                         </tr>
 
@@ -169,13 +188,23 @@
                                                     <tr>
                                                         <td class="cart_total_label">Name</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="name" name="name" required>
+                                                            <input type="text" id="name"
+                                                            class="form-control @error('name') is-invalid @enderror" 
+                                                            name="name" required>
+                                                            @error('name')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Email</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="email" id="email" name="email" required>
+                                                            <input type="email" id="email" name="email" 
+                                                            class="form-control @error('email') is-invalid @enderror" 
+                                                            required>
+                                                            @error('email')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -183,13 +212,22 @@
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
                                                             <input type="number" min="1"
                                                             step="1"
+                                                            class="form-control @error('phonenumber') is-invalid @enderror"
                                                             onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" id="name" name="phonenumber" required>
+                                                            @error('phonenumber')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="cart_total_label">Address</td>
                                                         <td class="cart_total_amount"> <i class="ti-gift mr-5"></i> 
-                                                            <input type="text" id="address" name="address" required>
+                                                            <input type="text" id="address" name="address" 
+                                                            class="form-control @error('address') is-invalid @enderror"
+                                                            required>
+                                                            @error('address')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
                                                         </td>
                                                     </tr>
                                                     <tr>
