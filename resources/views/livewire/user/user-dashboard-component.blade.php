@@ -24,7 +24,7 @@
                    <div class="hero-card box-shadow-outer-6 wow fadeIn animated mb-30 hover-up d-flex">
                        <div class="pl-30">
                            <h4 class="mb-5 fw-500">
-                               total transaksi = Rp{{ format_uang($total_all_price) }}
+                               Total Transaksi = Rp{{ format_uang($total_all_price) }}
                            </h4>
        
                        </div>
@@ -35,7 +35,7 @@
                        
                        <div class="pl-30">
                            <h4 class="mb-5 fw-500">
-                               total pesanan = {{ $orders->count() }}
+                               Total Pesanan = {{ $orders->count() }}
                            </h4>
                        </div>
                    </div>
@@ -70,10 +70,10 @@
                                         <th>Nomor Telepon</th>
                                         <th>Nama</th>
                                         <th>Pesanan</th>
-                                        <th>total Harga</th>
-                                        <th>status bayar</th>
-                                        <th>status antar</th>
-                                        <th>tanggal</th>
+                                        <th>Total Harga</th>
+                                        <th>Status Bayar</th>
+                                        <th>Status Antar</th>
+                                        <th>Tanggal</th>
                                         {{-- <th>Action</th> --}}
                                        </tr>
                                    </thead>
@@ -133,10 +133,10 @@
                                            <th>Nomor Telepon</th>
                                            <th>Nama</th>
                                            <th>Pesanan</th>
-                                           <th>total Harga</th>
-                                           <th>status bayar</th>
-                                           <th>status antar</th>
-                                           <th>tanggal</th>
+                                           <th>Total Harga</th>
+                                           <th>Status Bayar</th>
+                                           <th>Status Antar</th>
+                                           <th>Tanggal</th>
                                            {{-- <th>Action</th> --}}
                                        </tr>
                                    </thead>

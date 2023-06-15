@@ -32,14 +32,15 @@
        --}}
     
 
-            <h2 class="text-lg font-medium text-gray-900">
+            {{-- <h2 class="text-lg font-medium text-gray-900">
                 {{ __('Apakah Anda yakin ingin menghapus akun Anda?') }}
-            </h2>
+            </h2> --}}
 
             <p class="mt-1 text-sm text-gray-600">
                 {{ __('Setelah akun Anda dihapus, semua sumber daya dan datanya akan dihapus secara permanen. Silakan masukkan kata sandi Anda untuk mengonfirmasi bahwa Anda ingin menghapus akun Anda secara permanen.') }}
             </p>
 
+            <br>
             <div class="mt-6">
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
