@@ -66,15 +66,15 @@
                                <table class="table table-striped">
                                    <thead>
                                        <tr>
-                                           <th>#</th>
-                                           <th>phonenumber</th>
-                                           <th>Name</th>
-                                           <th>cart</th>
-                                           <th>total price</th>
-                                           <th>status bayar</th>
-                                           <th>status antar</th>
-                                           <th>tanggal</th>
-                                           {{-- <th>Action</th> --}}
+                                        <th>No</th>
+                                        <th>Nomor Telepon</th>
+                                        <th>Nama</th>
+                                        <th>Pesanan</th>
+                                        <th>total Harga</th>
+                                        <th>status bayar</th>
+                                        <th>status antar</th>
+                                        <th>tanggal</th>
+                                        {{-- <th>Action</th> --}}
                                        </tr>
                                    </thead>
                                    <tbody>
@@ -129,11 +129,11 @@
                                <table class="table table-striped">
                                    <thead>
                                        <tr>
-                                           <th>#</th>
-                                           <th>phonenumber</th>
-                                           <th>Name</th>
-                                           <th>cart</th>
-                                           <th>total price</th>
+                                           <th>No</th>
+                                           <th>Nomor Telepon</th>
+                                           <th>Nama</th>
+                                           <th>Pesanan</th>
+                                           <th>total Harga</th>
                                            <th>status bayar</th>
                                            <th>status antar</th>
                                            <th>tanggal</th>
