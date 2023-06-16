@@ -36,7 +36,7 @@ class OrderController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'phonenumber' => 'required|numeric|digits_between:10,12',
+            'phonenumber' => 'required|numeric|digits_between:10,12', //jadi cuma 10-12 angka nomor telepon
             'address' => 'required',
             'email' => 'required|email:dns',
         ]);
