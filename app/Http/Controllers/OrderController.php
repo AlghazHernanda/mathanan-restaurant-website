@@ -54,7 +54,7 @@ class OrderController extends Controller
         $str =  $request->total_price;
         $val = (float) str_replace(',', '', $str);
 
-        // error handling jika user tidak memilih menu
+        // error handling jika user tidak memilih menu, jadi harga engga bisa 0
         if ($val <= 0) {
             return back()->with('message', 'Harus Memilih Menu, Silahkan Coba Lagi');
         } else {
