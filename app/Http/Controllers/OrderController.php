@@ -109,6 +109,7 @@ class OrderController extends Controller
         $order->payment_type = $json->payment_type;  //ambil payment_type yang di dalam JSON
         $order->status = $json->transaction_status; //ambil transaction_status yang di dalam JSON
 
+        //jika payment_code ada maka masukan datanya, jika tidak maka kasih null
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
