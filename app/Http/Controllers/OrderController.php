@@ -111,6 +111,7 @@ class OrderController extends Controller
 
         //jika payment_code ada maka masukan datanya, jika tidak maka kasih null
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
+        //jika pdf_url ada maka masukan datanya, jika tidak maka kasih null
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
         return $order->save() ? redirect(url('/'))->with('alert-success', 'Order berhasil dibuat') : redirect(url('/'))->with('alert-failed', 'Terjadi kesalahan');
