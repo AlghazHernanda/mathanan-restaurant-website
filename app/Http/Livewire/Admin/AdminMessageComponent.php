@@ -9,6 +9,7 @@ class AdminMessageComponent extends Component
 {
     public function render()
     {
+        // urutkan pesan terbaru
         $message_users = Contact::orderBy('created_at', 'DESC')->paginate(10);
 
         return view('livewire.admin.admin-message-component', ['message_users' => $message_users]);
