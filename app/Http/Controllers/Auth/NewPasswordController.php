@@ -31,8 +31,8 @@ class NewPasswordController extends Controller
     {
         // validasi password yang dimasukan
         $request->validate([
-            'token' => ['required'],
-            'email' => ['required', 'email'],
+            'token' => ['required'], //validasi token
+            'email' => ['required', 'email'], //validasi email
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
