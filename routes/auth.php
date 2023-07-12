@@ -53,7 +53,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']); //simpan password
 
-    Route::put('password', [PasswordController::class, 'update'])->name('password.update');
+    Route::put('password', [PasswordController::class, 'update'])->name('password.update'); //update password
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
