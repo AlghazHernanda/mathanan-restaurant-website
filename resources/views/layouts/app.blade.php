@@ -65,7 +65,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img width="50" src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
+                        <a><img width="50" src="{{  asset('assets/imgs/logo/mathanan.jpeg') }}" alt="logo"></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-1">
