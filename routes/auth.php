@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 // routing untuk guest
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisteredUserController::class, 'create'])
+    Route::get('register', [RegisteredUserController::class, 'create']) //register
         ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
