@@ -75,7 +75,7 @@
                                             <th>status bayar</th>
                                             <th>status antar</th>
                                             <th>tanggal</th>
-                                            <th>Action</th>
+                                            {{-- <th>Action</th> --}}
                                         </tr>
                                     </thead>
                                     <tbody>
