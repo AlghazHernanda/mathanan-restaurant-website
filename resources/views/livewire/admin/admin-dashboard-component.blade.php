@@ -101,10 +101,10 @@
                                                 <td>{{ $order->status }}</td>
                                                 <td>{{ $order->status_antar }}</td>
                                                 <td>{{ $order->created_at->toDayDateTimeString() }}</td>                                               
-                                                <td>
+                                                {{-- <td> --}}
                                                     {{-- <a href="#"   wire:click.prevent="accept({{ $order->id}})" class="button">Sudah di antar</a> --}}
                                                     {{-- <a href="#" class="text-danger"  wire:click.prevent="deleteorder({{ $order->id}})" style="margin-left: 20px;">Delete</a> --}}
-                                                </td>
+                                                {{-- </td> --}}
                                             </tr>
                                             @endif 
                                         @endforeach
