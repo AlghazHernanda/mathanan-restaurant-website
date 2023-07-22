@@ -10,7 +10,7 @@ class AdminDashboardComponent extends Component
 {
     public function accept($order_id)
     {
-        $order = Order::find($order_id);
+        $order = Order::find($order_id); //cari order ID yg dipilih
         $order->status_antar = 'SUDAH';
         $order->save();
         session()->flash('message', 'data berhasil diubah');
