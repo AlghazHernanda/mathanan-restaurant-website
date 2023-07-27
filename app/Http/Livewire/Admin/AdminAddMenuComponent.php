@@ -62,8 +62,8 @@ class AdminAddMenuComponent extends Component
         // $this->image->storeAs('', $imageName);
         // $menu->image =  $imageName;
 
-        //round(microtime) agar nama dari gambar nya unik sesuai waktu di upload
         if ($this->image) {
+            //round(microtime) agar nama dari gambar nya unik sesuai waktu di upload
             $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $this->image->getClientOriginalName());
             $this->image->storeAs('', $filename);
             $menu->image = $filename;
