@@ -13,7 +13,7 @@ class CartComponent extends Component
     {
         $product = Cart::get($rowId);
         $qty = $product->qty + 1;
-        Cart::update($rowId, $qty);
+        Cart::update($rowId, $qty); //kirim rowId (id dari product) dan QTY nya ke dalam JSON Cart
         $this->emitTo('cart-icon-component', 'refreshComponent');
     }
 
