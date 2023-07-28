@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
+    // Jika implementasi database yang baik digunakan dengan indeks yang tepat pada kolom order_id, kompleksitasnya 
+    //bisa menjadi O(log n). 
+    // Namun, tanpa indeks, kompleksitas pencarian dan pembaruan dapat mencapai O(n) dalam kasus terburuk.
+
     public function payment_handler(Request $request)
     {
         // //untuk coba-coba ambil data di body postman
