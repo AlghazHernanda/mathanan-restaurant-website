@@ -86,6 +86,10 @@ class OrderController extends Controller
         }
     }
 
+    // kompleksitas waktu dari kode di bawah didominasi oleh operasi dekode JSON yang berjalan dalam O(n), 
+    // di mana n adalah ukuran data JSON yang diterima dari permintaan. Operasi lainnya memiliki kompleksitas konstan (O(1)), 
+    // yang artinya tidak tergantung pada ukuran data input.
+
     public function payment_post(Request $request)
     {
         // //untuk test liat hasil data payment yang diambil sebelum dimasukin ke database
