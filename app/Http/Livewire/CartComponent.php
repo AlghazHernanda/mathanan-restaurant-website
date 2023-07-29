@@ -11,9 +11,9 @@ class CartComponent extends Component
     // untuk menambah quantity
     public function increaseQuantity($rowId)
     {
-        $product = Cart::get($rowId);
+        $product = Cart::get($rowId); //0(1)
         $qty = $product->qty + 1;
-        Cart::update($rowId, $qty); //kirim rowId (id dari product) dan QTY nya ke dalam JSON Cart
+        Cart::update($rowId, $qty); //kirim rowId (id dari product) dan QTY nya ke dalam JSON Cart, 0(1)
         $this->emitTo('cart-icon-component', 'refreshComponent');
     }
 
