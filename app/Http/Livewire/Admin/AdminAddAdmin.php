@@ -33,6 +33,9 @@ class AdminAddAdmin extends Component
 
     public function render()
     {
+        // keseluruhan kompleksitas waktu dari kode ini didominasi oleh operasi pengurutan data dari database, 
+        // yang memiliki kompleksitas O(log n), di mana n adalah jumlah pengguna dalam database.
+
         $users = User::orderBy('created_at', 'DESC')->paginate(10);
         return view('livewire.admin.admin-add-admin', ['users' => $users]);
     }
