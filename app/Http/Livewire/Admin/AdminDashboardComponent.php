@@ -26,12 +26,13 @@ class AdminDashboardComponent extends Component
     }
     public function render()
     {
-        //ambil semua user
+        //ambil semua user,  O(n).
         $pengguna = User::all();
-        $orders = Order::orderBy('created_at', 'DESC')->paginate(10); //ambil data order secara DESC
+
+        $orders = Order::orderBy('created_at', 'DESC')->paginate(10); //ambil data order secara DESC, O(log n)
 
         //menghitung total harga yang status nya sudah dibayar
-        $total_all_price = Order::where('status', 'settlement')->sum('total_price'); //menghitung total semua transaksi
+        $total_all_price = Order::where('status', 'settlement')->sum('total_price'); //menghitung total semua transaksi,  O(n)
 
         //logic untuk ngambil data cart dari database
         // $order = Order::find('2');
