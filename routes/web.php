@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MenuComponent;
@@ -31,6 +32,8 @@ Route::get('/', HomeComponent::class)->name('home.index');
 Route::get('/menu', MenuComponent::class)->name('menu');
 Route::get('/cart', CartComponent::class)->name('menu.cart');
 Route::get('/contact', ContactComponent::class)->name('contact');
+
+Route::get('/coba', [CobaController::class, 'coba_order']);
 
 //route untuk pembayaran, harus post karena data nya gaboleh dikirim lewat url atau GET
 Route::post('/checkoutget', [OrderController::class, 'checkout'])->name('checkout');
