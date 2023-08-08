@@ -80,6 +80,7 @@
                                     </thead>
                                     <tbody>
                                         @php
+                                            //inkrement
                                             $i = ($orders->currentPage()-1)*$orders->perPage();
                                         @endphp
                                         @foreach ($orders as $order)
