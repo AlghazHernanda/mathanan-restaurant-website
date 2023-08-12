@@ -103,7 +103,7 @@ class OrderController extends Controller
         $order->name = $request->get('name');
         $order->email = $request->get('email');
         $order->address = $request->get('address');
-        $order->cart = $request->get('cart');
+        $order->cart = $request->get('cart'); //data cart
         $order->phonenumber = $request->get('phonenumber'); //data telepon
 
         $order->status_antar = "BELUM";
